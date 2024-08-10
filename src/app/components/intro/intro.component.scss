@@ -1,0 +1,63 @@
+.intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    position: relative;
+    top: 10vh;
+    row-gap: 20px;
+
+    .img {
+        width: 800px;
+        max-width: 60%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: clamp(15vw,100px, 50vw);
+            height: clamp(15vw,100px, 50vw);
+            border: 0.1px solid rgb(170, 160, 170);
+            border-radius: 50%;
+            &:hover {
+                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+
+    .content {
+        width: 800px;
+        max-width: 60%;
+        margin: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        h1,
+        h3 {
+            margin: -3%;
+            font-weight: 700;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        h1 {
+            font-size: clamp(3.5vw, 80px, 8.2vw);
+        }
+
+        h3 {
+            font-size: clamp(2.8vw, 65px, 7.8vw);
+        }
+
+        p {
+            text-align: center;
+            font-size: clamp(0.8vw, 12px, 2.8vw);
+            font-weight: 500;
+            // font-size: clamp(0.8vw, 12px, 4.2vw);
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<div class="accordian-parent">
+    <h3>{{title}}</h3>
+    <ng-container *ngFor="let tab of tabs; let i = index">
+        <div class="main1">
+            <div class="image">
+                <img [src]="tab.img" [alt]="'tab.title'" class="img">
+            </div>
+            <div class="accordian">
+                <div class="row" (click)="expand(i)">
+                    <div class="col1">
+                        <div class="sub-row">
+                            <p class="title">{{tab.title}}</p>
+                            <svg [ngStyle]="{'transform': !isRotated[i] ? 'rotate(0deg)' : 'rotate(90deg)'}"
+                                viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" fill="white" fill-opacity="0.01" />
+                                <path d="M19 12L31 24L19 36" stroke="#000000" stroke-width="4" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <p class="sub-title">{{tab.role}}</p>
+                    </div>
+                    <div class="col2">
+                        <p class="date">{{tab.date}}</p>
+                    </div>
+                </div>
+                <div class="row1" *ngIf="isRotated[i]" @expandCollapse>
+                    <p>
+                        {{tab.content}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+</div>

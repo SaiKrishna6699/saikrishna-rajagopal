@@ -1,0 +1,64 @@
+.nav-parent {
+    width: auto;
+    height: 3.2rem;
+    padding: 0% auto;
+    margin: 0% auto;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    position: fixed;
+    bottom: 0.7em;
+
+    left: 50%;
+    transform: translate(-50%);
+
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 250px;
+        max-width: min(250px, 80%);
+        min-width: 200px;
+        height: 1.6rem;
+        gap: 1.2rem;
+        backdrop-filter: blur(29px);
+
+        border-radius: 50px;
+        border: 0.1px solid rgb(223, 221, 221);
+        padding: 10px 15px;
+        list-style-type: none;
+        transition: 0.5s width ease-in-out;
+
+        &:hover {
+            width: 280px;
+            max-width: 280px;
+            max-height: 2rem;
+            transition: 0.5s width ease-in-out;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            transition: 0.25s transform ease-in-out;
+            position: relative;
+            top: 4px;
+
+            &:hover {
+                transform: scale(1.15);
+                transition: 0.25s transform ease-in-out;
+            }
+        }
+    }
+}
+
+::ng-deep .custom-tooltip {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    top: -6px;
+    z-index: 1000;
+}

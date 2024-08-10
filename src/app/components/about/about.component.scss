@@ -1,0 +1,27 @@
+.about-parent{
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    height: auto;
+    position: relative;
+    top: 14vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
+
+    h3{
+        font-size: clamp(1.1rem, 18px, 5rem);
+        font-weight: 700;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    p{
+        font-size: clamp(0.8vw, 12px, 2.8vw);
+        font-weight: 500;
+        margin-top: -2px;
+    }
+}

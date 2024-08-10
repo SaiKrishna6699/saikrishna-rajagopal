@@ -1,0 +1,135 @@
+.accordian-parent {
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    height: auto;
+    position: relative;
+    top: 15vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
+
+    h3 {
+        font-size: clamp(1.1rem, 18px, 5rem);
+        font-weight: 700;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .main1 {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        margin-bottom: 6px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0.5rem;
+
+        .image {
+            width: clamp(8%, 30px, 7rem);
+            height: auto;
+            margin-right: 0.2rem;
+            display: flex;
+            justify-content: flex-start;
+
+            img {
+                width: clamp(3vw, 24px, 7rem);
+                height: clamp(3vw, 24px, 7rem);
+                border-radius: 50%;
+                border: 0.1px solid rgb(185, 185, 185);
+                margin-top: -0.2rem;
+            }
+        }
+
+        .accordian {
+            width: 84%;
+            display: flex;
+            flex-direction: column;
+            cursor: default;
+
+            &:hover {
+                .row .col1 svg {
+                    display: flex;
+                }
+            }
+
+            .row {
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer !important;
+
+                .col1,
+                .col2 {
+                    width: 80%;
+                    height: 2.5rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    margin: 0;
+                    padding: 0%;
+
+                    svg {
+                        display: none;
+                        padding: 0%;
+                        margin: 0%;
+                        width: clamp(1.2vw, 14px, 3vw);
+                    }
+
+                    .sub-row {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                    }
+
+                    p {
+                        margin: 0%;
+                        padding: 0%;
+                        font-size: clamp(0.8vw, 12px, 2.8vw);
+                        font-weight: 700;
+                        margin-left: -0.5rem;
+
+                        &.sub-title {
+                            font-size: clamp(0.75vw, 11.5px, 2.7vw);
+                            font-weight: 400;
+                        }
+
+                        &.date {
+                            font-size: clamp(0.85vw, 12px, 2.9vw);
+                            font-weight: 300;
+                        }
+                    }
+
+                }
+
+                .col2 {
+                    align-items: flex-end;
+                    width: 25% !important;
+                }
+            }
+
+            .row1 {
+                margin-left: -1.2%;
+                width: 95%;
+                height: auto;
+
+                p {
+                    margin: 0%;
+                    padding: 0%;
+                    font-size: clamp(0.7vw, 10px, 2.6vw);
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

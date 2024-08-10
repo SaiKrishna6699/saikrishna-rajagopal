@@ -1,0 +1,45 @@
+.skills-parent {
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    height: auto;
+    position: relative;
+    top: 15vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
+
+    h3 {
+        font-size: clamp(1.1rem, 18px, 5rem);
+        font-weight: 700;
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .main1 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+
+        .item {
+            padding: clamp(0.3rem, 2px, 0.1vw);
+            box-sizing: border-box;
+            margin: 0 0.1rem 0.5rem 0;
+            background-color: rgb(131, 131, 131);
+            color: rgb(255, 255, 255);
+            width: auto;
+            height: 1.5rem;
+            border-radius: 5px;
+            font-size: clamp(0.8vw, 12px, 2.8vw);
+            font-weight: 500;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
