@@ -11,13 +11,14 @@
                 [stroke]="chartOptions.stroke!">
             </apx-chart>
             <p class="skill-name">{{skillName}} &nbsp; &nbsp; &nbsp;</p>
+            <p class="skill-name">Exp: {{skillExp}}  &nbsp; &nbsp; &nbsp;</p>
         </div>
     </div>
     <div class="main2">
         <h4>Skill Analysis</h4>
         <div class="graph1">
             <apx-chart #radarChart [series]="radarChartOptions.series!" [chart]="radarChartOptions.chart!"
-                [xaxis]="radarChartOptions.xaxis!" [yaxis]="radarChartOptions.yaxis!"
+                [xaxis]="radarChartOptions.xaxis!" [yaxis]="radarChartOptions.yaxis!" [grid]="radarChartOptions.grid!" [dataLabels]="radarChartOptions.dataLabels!"
                 [fill]="radarChartOptions.fill!">
             </apx-chart>
 

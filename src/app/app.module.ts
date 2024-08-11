@@ -13,6 +13,7 @@ import { ButtonModule } from 'primeng/button';
 import { AboutComponent } from './components/about/about.component';
 import { AccordianCompComponent } from './components/accordian-comp/accordian-comp.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 
@@ -24,6 +25,7 @@ import { SkillsComponent } from './components/skills/skills.component';
     AboutComponent,
     AccordianCompComponent,
     SkillsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

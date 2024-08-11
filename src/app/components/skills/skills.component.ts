@@ -61,6 +61,7 @@ export class SkillsComponent implements OnInit {
 
   activeSkillIndex: number = 0;
   skillName: string = '';
+  skillExp: string = '';
 
   constructor() {
     this.chartOptions = {
@@ -144,7 +145,7 @@ export class SkillsComponent implements OnInit {
       series: [
         {
           name: "Percentage",
-          data: [95, 85, 55, 98, 60, 20]
+          data: [65, 25, 55, 98, 95, 85]
         }
       ],
       chart: {
@@ -152,7 +153,7 @@ export class SkillsComponent implements OnInit {
         type: "radar"
       },
       xaxis: {
-        categories: ["Front-end", "Backend", "Ui/Ux", "Web Development", "Mobile Development", "Testing"],
+        categories: ["Mobile Development", "Testing", "Ui/Ux", "Web Development", "Frontend", "Backend"],
         style: {
           fontSize: "clamp(0.6rem, 8px, 1rem)",
           color: `var(--text-color)`
@@ -174,12 +175,12 @@ export class SkillsComponent implements OnInit {
         enabled: true,
         background: {
           enabled: true,
-          foreColor: '#fff',
-          borderRadius: 2,
-          padding: 4,
-          borderWidth: 1,
-          borderColor: '#e0e0e0',
-          opacity: 0.9
+          foreColor: `var(--text-color)`,
+          borderRadius: 4,
+          padding: 5,
+          borderWidth: 0.5,
+          borderColor: 'var(--text-color',
+          opacity: 0.5
         }
       },
       fill: {
@@ -188,10 +189,10 @@ export class SkillsComponent implements OnInit {
           shade: "dark",
           type: "horizontal",
           shadeIntensity: 0.2,
-          gradientToColors: ["#ABE5A1"],
+          gradientToColors: ["#DB5779"],
           inverseColors: true,
-          opacityFrom: 0.8,
-          opacityTo: 0.8,
+          opacityFrom: 0.9,
+          opacityTo: 0.7,
           stops: [0, 100]
         }
       },
@@ -210,6 +211,7 @@ export class SkillsComponent implements OnInit {
     const skillPerNumber = parseFloat(skillPer.replace('%', ''));
     this.activeSkillIndex = index;
     this.skillName = this.skills[index].title;
+    this.skillExp = this.skills[index].exp;
 
     this.chartOptions.series = [skillPerNumber];
   }

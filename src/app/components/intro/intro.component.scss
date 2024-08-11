@@ -4,24 +4,145 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    max-width: 90%;
+    margin: auto;
 
     position: relative;
     top: 10vh;
     row-gap: 20px;
+    margin-bottom: 5vh;
+
+    .lines {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0.25rem;
+
+        &:last-of-type {
+            flex-direction: column-reverse;
+        }
+    }
+
+    @keyframes animateBg {
+        0% {
+            background-position: 0% 0%;
+        }
+
+        100% {
+            background-position: 100% 0%;
+        }
+    }
+
+    .line {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0.5rem;
+    }
+
+    .blocks {
+        animation: animateBg 1.8s linear infinite;
+        background-size: 200% 100%;
+    }
+
+    .line1,
+    .line3,
+    .line5 {
+        .blocks {
+            width: clamp(10vw, 150px, 6rem);
+            height: clamp(1vw, 10px, 1rem);
+            background-image: linear-gradient(to right, #ABE5A1, #0F84EE, #ABE5A1, #0F84EE);
+            border-radius: 2px;
+        }
+
+        .blocks:nth-of-type(even) {
+            background-image: linear-gradient(to right, #DB5779, #FF8000, #DB5779, #FF8000);
+            width: clamp(8vw, 100px, 3rem);
+        }
+
+        .blocks:last-of-type {
+            background-image: linear-gradient(to right, #313131, #FFFFFF, #313131, #FFFFFF);
+            width: clamp(1vw, 10px, 1rem);
+            border-radius: 50%;
+        }
+    }
+
+    .line2,
+    .line4 {
+        .blocks {
+            width: clamp(45vw, 850px, 10rem);
+            height: clamp(1vw, 10px, 1rem);
+            background-image: linear-gradient(to right, #ff2063, #0F84EE, #ff2063, #0F84EE);
+            border-radius: 2px;
+        }
+    }
+
+    .line5 {
+        margin-left: clamp(10vw, 55px, 6.5rem);
+    }
+
+    .line4 .blocks {
+        width: clamp(45vw, 150px, 10rem);
+        margin-left: clamp(7vw, 30px, 5rem);
+    }
+
+    .line3 {
+        .blocks {
+            background-image: linear-gradient(to right, #DB5779, #FF8000, #DB5779, #FF8000);
+            width: clamp(8vw, 100px, 3rem);
+        }
+
+        .blocks:nth-of-type(even) {
+            width: clamp(10vw, 150px, 6rem);
+            background-image: linear-gradient(to right, #ABE5A1, #0F84EE, #ABE5A1, #0F84EE);
+        }
+
+        .blocks:nth-of-type(2),
+        .blocks:nth-of-type(5) {
+            background-image: linear-gradient(to right, #313131, #FFFFFF, #313131, #FFFFFF);
+            width: clamp(1vw, 10px, 1rem);
+            border-radius: 50%;
+        }
+
+        .blocks:last-of-type,
+        .blocks:nth-of-type(3) {
+            background-image: linear-gradient(to right, #ABE5A1, #0F84EE, #ABE5A1, #0F84EE);
+            border-radius: 2px;
+        }
+
+        .blocks:nth-of-type(4) {
+            background-image: linear-gradient(to right, #DB5779, #FF8000, #DB5779, #FF8000);
+        }
+    }
+
+
+    .main {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: space-between;
+        justify-content: space-between;
+    }
 
     .img {
-        width: 800px;
-        max-width: 60%;
+        width: 500px;
+        max-width: 80%;
         height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
+
         img {
-            width: clamp(15vw,100px, 50vw);
-            height: clamp(15vw,100px, 50vw);
+            width: clamp(10vw, 205px, 20vw);
+            height: clamp(10vw, 205px, 20vw);
             border: 0.1px solid rgb(170, 160, 170);
             border-radius: 50%;
             object-fit: cover;
+
             &:hover {
                 box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
             }
@@ -29,33 +150,33 @@
     }
 
     .content {
-        width: 800px;
-        max-width: 60%;
+        width: 700px;
+        max-width: 80%;
         margin: auto;
         height: auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        align-items: flex-start;
+        justify-content: flex-start;
 
 
         h1,
         h3 {
-            margin: -3%;
+            margin: 0%;
             font-weight: 700;
             font-family: 'Poppins', sans-serif;
         }
 
         h1 {
-            font-size: clamp(3.5vw, 80px, 8.2vw);
+            font-size: clamp(2.5vw, 50px, 6.2vw);
         }
 
         h3 {
-            font-size: clamp(2.8vw, 65px, 7.8vw);
+            font-size: clamp(1.8vw, 35px, 5.8vw);
         }
 
         p {
-            text-align: center;
+            text-align: start;
             font-size: clamp(0.8vw, 12px, 2.8vw);
             font-weight: 500;
             // font-size: clamp(0.8vw, 12px, 4.2vw);

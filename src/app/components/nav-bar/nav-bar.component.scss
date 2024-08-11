@@ -27,10 +27,10 @@
         min-width: 200px;
         height: 1.6rem;
         gap: 1.2rem;
-        backdrop-filter: blur(29px);
+        // background-color: var(--background-color);
+        backdrop-filter: blur(5px);
 
         border-radius: 50px;
-        // border: 0.1px solid rgb(223, 221, 221);
         padding: 10px 15px;
         list-style-type: none;
         transition: 0.5s width ease-in-out;
@@ -46,11 +46,40 @@
         .nav-link {
             transition: 0.25s transform ease-in-out;
             position: relative;
-            top: 4px;
+            top: 1px;
+            border-radius: 50%;
+            padding: 0%;
+            margin: 0%;
+            height: 22px;
+            width: 22px;
+            bottom: 4px;
 
             &:hover {
                 transform: scale(1.15);
                 transition: 0.25s transform ease-in-out;
+                backdrop-filter: blur(50px);
+                padding: 5px;
+
+                // svg {
+                //     fill: black !important;
+                // }
+            
+                // svg.svg1 {
+                //     fill: black !important;
+            
+                //     rect {
+                //         fill: black !important;
+                //     }
+                // }
+            
+                // svg.svg-c {
+                //     fill: black !important;
+                //     stroke: black !important;
+            
+                //     path {
+                //         fill: transparent;
+                //     }
+                // }
             }
         }
     }
@@ -64,3 +93,4 @@
     background-color: var(--background-color) !important;
     color: var(--text-color) !important;
 }
+
