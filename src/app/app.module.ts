@@ -7,11 +7,13 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { NgApexchartsModule } from 'ng-apexcharts';
 import { AccordionModule } from 'primeng/accordion';
 import { ButtonModule } from 'primeng/button';
 import { AboutComponent } from './components/about/about.component';
 import { AccordianCompComponent } from './components/accordian-comp/accordian-comp.component';
 import { SkillsComponent } from './components/skills/skills.component';
+
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { SkillsComponent } from './components/skills/skills.component';
     BrowserAnimationsModule,
     MatTooltipModule,
     AccordionModule,
-    ButtonModule
+    ButtonModule,
+    NgApexchartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

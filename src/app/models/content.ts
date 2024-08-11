@@ -62,7 +62,7 @@ export const skills = [
     { title: 'CSS', exp: '2.0 Years', per: '95%' },
     { title: 'Bootstrap', exp: '1.6 Years', per: '92%' },
     { title: 'SASS/SCSS', exp: '1.3 Years', per: '91%' },
-    { title: 'Angular', exp: '1.8 Years', per: '93%' },
+    { title: 'Angular', exp: '1.8 Years', per: '100%' },
     { title: 'React', exp: '1.7 Years', per: '92%' },
     { title: 'React Native', exp: '1.5 Years', per: '90%' },
   

@@ -1,9 +1,26 @@
 <div class="skills-parent">
     <h3>{{title}}</h3>
     <div class="main1">
-        <ng-container *ngFor="let skill of skills">
-            <div class="item">{{skill.title}}</div>
+        <ng-container *ngFor="let skill of skills; let i = index">
+            <div class="item" [class.active]="i === activeSkillIndex" (click)="checkSkill(i)">{{skill.title}}</div>
         </ng-container>
+        <div class="graph">
+            <p class="context">Click on each skill to know the percentage</p>
+            <apx-chart #chart [series]="chartOptions.series!" [chart]="chartOptions.chart!"
+                [labels]="chartOptions.labels!" [plotOptions]="chartOptions.plotOptions!" [fill]="chartOptions.fill!"
+                [stroke]="chartOptions.stroke!">
+            </apx-chart>
+            <p class="skill-name">{{skillName}} &nbsp; &nbsp; &nbsp;</p>
+        </div>
     </div>
-    <div class="main2"></div>
+    <div class="main2">
+        <h4>Skill Analysis</h4>
+        <div class="graph1">
+            <apx-chart #radarChart [series]="radarChartOptions.series!" [chart]="radarChartOptions.chart!"
+                [xaxis]="radarChartOptions.xaxis!" [yaxis]="radarChartOptions.yaxis!"
+                [fill]="radarChartOptions.fill!">
+            </apx-chart>
+
+        </div>
+    </div>
 </div>
