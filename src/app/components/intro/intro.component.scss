@@ -21,6 +21,7 @@
             height: clamp(15vw,100px, 50vw);
             border: 0.1px solid rgb(170, 160, 170);
             border-radius: 50%;
+            object-fit: cover;
             &:hover {
                 box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
             }

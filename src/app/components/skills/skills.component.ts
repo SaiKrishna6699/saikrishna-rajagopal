@@ -10,7 +10,8 @@ import {
   ApexYAxis,
   ApexGrid,
   ApexDataLabels,
-  ApexTitleSubtitle
+  ApexTitleSubtitle,
+  ApexTooltip
 } from "ng-apexcharts";
 
 
@@ -22,12 +23,15 @@ import {
 export type RadarChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
-  xaxis: ApexXAxis & {style: {fontSize: string}};
+  xaxis: ApexXAxis & { style?: { fontSize?: string; color?: string } };
   yaxis?: ApexYAxis;
   grid?: ApexGrid;
   dataLabels?: ApexDataLabels;
   title: ApexTitleSubtitle  | { style: { fontSize: string, marginTop: string } };
   fill: ApexFill;
+  tooltip?: {
+    enabled: boolean;
+  };
 };
 
 export type ChartOptions = {
@@ -75,7 +79,7 @@ export class SkillsComponent implements OnInit {
           hollow: {
             margin: 0,
             size: "70%",
-            background: "#fff",
+            background: `var(--background-color)`,
             image: undefined,
             position: "front",
             dropShadow: {
@@ -87,8 +91,8 @@ export class SkillsComponent implements OnInit {
             }
           },
           track: {
-            background: "#fff",
-            strokeWidth: "67%",
+            background: `var(--text-color)`,
+            strokeWidth: "95%",
             margin: 0, // margin is in pixels
             dropShadow: {
               enabled: true,
@@ -103,14 +107,14 @@ export class SkillsComponent implements OnInit {
             name: {
               offsetY: -10,
               show: true,
-              color: "#888",
+              color: `var(--text-color)`,
               fontSize: "clamp(1rem, 15px, 3rem)"
             },
             value: {
               formatter: function (val) {
                 return parseInt(val.toString(), 10).toString();
               },
-              color: "#111",
+              color: `var(--text-color)`,
               fontSize: "36px",
               show: true
             }
@@ -147,13 +151,11 @@ export class SkillsComponent implements OnInit {
         height: 325,
         type: "radar"
       },
-      title: {
-        text: "Skill Analysis"
-      },
       xaxis: {
         categories: ["Front-end", "Backend", "Ui/Ux", "Web Development", "Mobile Development", "Testing"],
         style: {
           fontSize: "clamp(0.6rem, 8px, 1rem)",
+          color: `var(--text-color)`
         }
       },
       yaxis: {
@@ -164,7 +166,7 @@ export class SkillsComponent implements OnInit {
         }
       },
       grid: {
-        show: true,
+        show: false,
         borderColor: '#e0e0e0',
         strokeDashArray: 2
       },
@@ -192,6 +194,9 @@ export class SkillsComponent implements OnInit {
           opacityTo: 0.8,
           stops: [0, 100]
         }
+      },
+      tooltip: {
+        enabled: false // Disable tooltips
       }
     };
   }

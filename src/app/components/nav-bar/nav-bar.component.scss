@@ -30,7 +30,7 @@
         backdrop-filter: blur(29px);
 
         border-radius: 50px;
-        border: 0.1px solid rgb(223, 221, 221);
+        // border: 0.1px solid rgb(223, 221, 221);
         padding: 10px 15px;
         list-style-type: none;
         transition: 0.5s width ease-in-out;
@@ -61,4 +61,6 @@
     padding: 4px 8px;
     top: -6px;
     z-index: 1000;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
 }

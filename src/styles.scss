@@ -1,11 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-body, html{
+:root {
+    --background-color-light: #ffffff;
+    --background-color-dark: #000000;
+    --text-color-light: #000000;
+    --text-color-dark: #ffffff;
+}
+
+
+
+.light-theme {
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+}
+
+.dark-theme {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+}
+
+body,
+html {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-html, body { height: 100%; }
+* {
+    svg {
+        fill: var(--text-color) !important;
+    }
+
+    svg.svg1 {
+        fill: var(--text-color) !important;
+
+        rect {
+            fill: var(--background-color) !important;
+        }
+    }
+
+    svg.svg-c {
+        fill: var(--background-color) !important;
+        stroke: var(--text-color) !important;
+
+        path {
+            fill: transparent;
+        }
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
