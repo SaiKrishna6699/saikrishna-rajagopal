@@ -11,8 +11,8 @@ import { Content as con, experience as exp, education as edu, skills as sk, proj
   animations: [
     trigger('lineAnimation', [
       transition(':enter', [
-        style({ transform: 'translateY(-2%)', opacity: 0, filter: 'blur(10px)' }),
-        animate('1s ease-out', style({ transform: 'translateY(0)', opacity: 1, filter: 'blur(0)' }))
+        style({ transform: 'translateY(-10%)', opacity: 0, filter: 'blur(10px)' }),
+        animate('1s ease-out', style({ transform: 'translateY(0%)', opacity: 1, filter: 'blur(0)' }))
       ]),
       transition('* => *', [
         animate('1s ease-in-out', keyframes([
@@ -22,7 +22,7 @@ import { Content as con, experience as exp, education as edu, skills as sk, proj
         ]))
       ]),
       transition(':enter', [
-        style({ opacity: 0, transform: 'scale(0.5)', filter: 'blur(10px)' }),
+        style({ opacity: 0, transform: 'scale(1.5)', filter: 'blur(10px)' }),
         animate('1s ease-out', style({ opacity: 1, transform: 'scale(1)', filter: 'blur(0)' }))
       ])
     ])

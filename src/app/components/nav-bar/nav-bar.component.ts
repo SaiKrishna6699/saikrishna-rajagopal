@@ -22,4 +22,8 @@ export class NavBarComponent {
     document.body.classList.toggle('light-theme', !this.isDarkTheme);
     localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
   }
+
+  openLink(url: string) {
+    window.open(url, '_blank');
+  }
 }
