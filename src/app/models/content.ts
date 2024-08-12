@@ -83,7 +83,25 @@ export const skills = [
 
 export const projects = [
     { title: 'Trinethra Test Portal', time: 'Sep 2023 - Oct 2023', desc: `An Angular-based web app hosted on Firebase for seamless test creation, management, and participation. It offers a user-friendly interface, real-time synchronization, and secure authentication for efficient online testing.`, stack: ['Angular', 'HTML', 'CSS', 'TypeScript', 'Firebase', 'NoSQL', 'Node Js'], img: 'assets/img/test-portal.png' },
-    { title: 'Weather App', time: 'Jul 2023 - Aug 2023', desc: `An Angular-based application hosted on Firebase, providing accurate weather updates for cities, states, provinces, and countries. It integrates with a weather API for real-time data and forecasts.`, stack: ['Angular', 'HTML', 'CSS', 'TypeScript', 'Firebase', 'NoSQL', 'Scss', 'Weather Api', 'RxJs'], img: 'assets/img/weather app.png'},
-    { title: 'Currency Convertor', time: 'Mar 2023 - Apr 2023', desc: `A real-time application built with Angular and hosted on Firebase, offering instant currency conversion based on live exchange rates for accurate financial tracking and currency exchange.`, stack: ['Angular', 'HTML', 'TypeScript', 'Reactive Forms', 'Firebase', 'RxJs'], img: 'assets/img/currency-converter.png'},
-    { title: 'Airbus, Bus Booking System', time: 'Nov 2022 - Jan 2024', desc: `A real-time bus booking application utilizing Angular for the frontend, Spring Boot and microservices for the backend, MySQL for database management, and deployed using Jenkins and Netlify. It features seamless integration and up-to-date booking capabilities.`,stack: ['Angular', 'Spring Boot', 'Micro Services', 'MySql', 'Jenkins', 'TypeScript', 'Netify'], img: 'assets/img/airbus.png'}
+    { title: 'Weather App', time: 'Jul 2023 - Aug 2023', desc: `An Angular-based application hosted on Firebase, providing accurate weather updates for cities, states, provinces, and countries. It integrates with a weather API for real-time data and forecasts.`, stack: ['Angular', 'HTML', 'CSS', 'TypeScript', 'Firebase', 'NoSQL', 'Scss', 'Weather Api', 'RxJs'], img: 'assets/img/weather app.png' },
+    { title: 'Currency Convertor', time: 'Mar 2023 - Apr 2023', desc: `A real-time application built with Angular and hosted on Firebase, offering instant currency conversion based on live exchange rates for accurate financial tracking and currency exchange.`, stack: ['Angular', 'HTML', 'TypeScript', 'Reactive Forms', 'Firebase', 'RxJs'], img: 'assets/img/currency-converter.png' },
+    { title: 'Airbus, Bus Booking System', time: 'Nov 2022 - Jan 2024', desc: `A real-time bus booking application utilizing Angular for the frontend, Spring Boot and microservices for the backend, MySQL for database management, and deployed using Jenkins and Netlify. It features seamless integration and up-to-date booking capabilities.`, stack: ['Angular', 'Spring Boot', 'Micro Services', 'MySql', 'Jenkins', 'TypeScript', 'Netify'], img: 'assets/img/airbus.png' }
+]
+
+export const pics = [
+    { type: 'image', url: 'assets/img1/1.jpeg', orientation: 'square' },
+    { type: 'image', url: 'assets/img1/2.jpeg', orientation: 'square' },
+    { type: 'image', url: 'assets/img1/3.jpeg', orientation: 'landscape' },
+    { type: 'image', url: 'assets/img1/4.jpeg', orientation: 'landscape' },
+    { type: 'image', url: 'assets/img1/6.jpeg', orientation: 'landscape'  },
+    { type: 'video', url: 'assets/img1/5.mp4', orientation: 'landscape' },
+    { type: 'video', url: 'assets/img1/7.mp4', orientation: 'landscape' },
+    { type: 'image', url: 'assets/img1/8.jpg', orientation: 'square'  },
+    { type: 'image', url: 'assets/img1/10.jpg', orientation: 'landscape' },
+    { type: 'image', url: 'assets/img1/11.jpg', orientation: 'landscape' },
+    { type: 'image', url: 'assets/img1/12.jpg', orientation: 'square' },
+    { type: 'image', url: 'assets/img1/13.jpeg', orientation: 'portrait' },
+    { type: 'image', url: 'assets/img1/14.jpeg', orientation: 'landscape' },
+    { type: 'image', url: 'assets/img1/15.jpeg', orientation: 'landscape' },
+    { type: 'image', url: 'assets/img1/16.jpeg', orientation: 'landscape' },
 ]

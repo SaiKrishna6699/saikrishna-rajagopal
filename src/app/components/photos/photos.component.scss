@@ -1,0 +1,53 @@
+.photos-parent{
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    height: auto;
+    position: relative;
+    top: 14vh;
+    margin-bottom: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
+
+    h3 {
+        font-size: clamp(0.9rem, 15px, 4.6rem);
+        font-weight: 500;
+        margin: 0%;
+        padding: 0%;
+        text-align: center;
+        color: var(--background-color);
+        background-color: var(--text-color);
+        border-radius: 5px;
+        padding: 0.3% 0.6%;
+        margin: auto;
+    }
+}
+
+.collage-container{
+    width: 70%;
+    height: auto;
+    position: relative;
+    top: 2rem;
+    margin: auto;
+    padding: auto;
+
+    video{
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin: 1%;
+        padding: auto;
+    }
+
+    img{
+        width: 48%;
+        height: 50%;
+        border-radius: 5px;
+        margin: 1%;
+        // max-height: 10rem;
+    }
+}
