@@ -24,11 +24,13 @@ export type RadarChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
   xaxis: ApexXAxis & { style?: { fontSize?: string; color?: string } };
-  yaxis?: ApexYAxis;
+  yaxis?: ApexYAxis & { style?: { fontSize?: string; color?: string } };
   grid?: ApexGrid;
   dataLabels?: ApexDataLabels;
-  title: ApexTitleSubtitle  | { style: { fontSize: string, marginTop: string } };
+  title: ApexTitleSubtitle | { style: { fontSize: string, marginTop: string } };
   fill: ApexFill;
+  stroke: ApexStroke;
+  plotOptions: ApexPlotOptions;
   tooltip?: {
     enabled: boolean;
   };
@@ -70,7 +72,7 @@ export class SkillsComponent implements OnInit {
         height: 350,
         type: "radialBar",
         toolbar: {
-          show: true
+          show: false
         }
       },
       plotOptions: {
@@ -150,26 +152,35 @@ export class SkillsComponent implements OnInit {
       ],
       chart: {
         height: 325,
-        type: "radar"
+        type: "radar",
+        toolbar: {
+          show: false
+        },
       },
       xaxis: {
         categories: ["Mobile Development", "Testing", "Ui/Ux", "Web Development", "Frontend", "Backend"],
-        style: {
-          fontSize: "clamp(0.6rem, 8px, 1rem)",
-          color: `var(--text-color)`
+        labels: {
+          style: {
+            fontSize: "clamp(0.6rem, 8px, 1rem)",
+            colors: `var(--text-color)`
+          }
         }
       },
       yaxis: {
-        show: false,
+        show: true,
         tickAmount: 5,
         labels: {
-          formatter: (value) => `${value}%`
+          formatter: (value) => `${value}%`,
+          style: {
+            fontSize: "clamp(0.6rem, 8px, 1rem)",
+            colors: `var(--text-color)`
+          }
         }
       },
       grid: {
-        show: false,
-        borderColor: '#e0e0e0',
-        strokeDashArray: 2
+        show: true,
+        borderColor: 'var(--background-color)', // Border color of the grid
+        strokeDashArray: 5,
       },
       dataLabels: {
         enabled: true,
@@ -179,7 +190,7 @@ export class SkillsComponent implements OnInit {
           borderRadius: 4,
           padding: 5,
           borderWidth: 0.5,
-          borderColor: 'var(--text-color',
+          borderColor: 'var(--text-color)',
           opacity: 0.5
         }
       },
@@ -188,7 +199,7 @@ export class SkillsComponent implements OnInit {
         gradient: {
           shade: "dark",
           type: "horizontal",
-          shadeIntensity: 0.2,
+          shadeIntensity: 0.5,
           gradientToColors: ["#DB5779"],
           inverseColors: true,
           opacityFrom: 0.9,
@@ -196,8 +207,21 @@ export class SkillsComponent implements OnInit {
           stops: [0, 100]
         }
       },
+      plotOptions: {
+        radar: {
+          polygons: {
+            strokeColors: `var(--text-color)`, // Color of the radar grid lines
+            connectorColors: `var(--text-color)`, // Color of the connecting lines within the radar chart
+          }
+        }
+      },
+      stroke: {
+        show: true,
+        width: 2,
+        colors: ['#FF5733'], // Color of the radar lines
+      },
       tooltip: {
-        enabled: false // Disable tooltips
+        enabled: false
       }
     };
   }

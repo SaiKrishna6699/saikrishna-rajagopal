@@ -36,7 +36,8 @@ export const experience = [
                           consumers, and developed APIs for efficient data transfer and enhanced user engagement. The work
                           consistently emphasizes user-friendly design, security, and performance optimization.`},
     {
-        title: 'Mphasis LTD', role: 'Associate Software Engineer', date: 'Jan 2022 - Feb 2023', img: 'assets/img/mphasis_logo.jpg', content: `Collaborated with a diverse team of highly skilled professionals to develop the front-end user interface (UI) and test REST APIs for Gemini, a US brokerage application. Worked closely with the front-end team using the Angular framework to create an intuitive and visually appealing UI. Conducted comprehensive testing of REST APIs to ensure functionality and adherence to requirements. Participated in code reviews and actively contributed to the team's code quality and best practices. Implemented version control using Git and GitHub for efficient collaboration and code management. Enhanced the front-end UI by personalizing the code and ensuring logical and efficient functionality. Contributed to the successful delivery of the application by actively participating in both front-end UI development and API testing.`}
+        title: 'Mphasis LTD', role: 'Associate Software Engineer', date: 'Jan 2022 - Feb 2023', img: 'assets/img/mphasis_logo.jpg', content: `Collaborated with a diverse team of highly skilled professionals to develop the front-end user interface (UI) and test REST APIs for Gemini, a US brokerage application. Worked closely with the front-end team using the Angular framework to create an intuitive and visually appealing UI. Conducted comprehensive testing of REST APIs to ensure functionality and adherence to requirements. Participated in code reviews and actively contributed to the team's code quality and best practices. Implemented version control using Git and GitHub for efficient collaboration and code management. Enhanced the front-end UI by personalizing the code and ensuring logical and efficient functionality. Contributed to the successful delivery of the application by actively participating in both front-end UI development and API testing.`
+    }
 ]
 
 export const education = [
@@ -53,11 +54,11 @@ export const skills = [
     { title: 'JavaScript', exp: '2.0 Years', per: '95%' },
     { title: 'TypeScript', exp: '1.8 Years', per: '92%' },
     { title: 'Python', exp: '1.5 Years', per: '91%' },
-  
+
     { title: 'MySQL', exp: '1.7 Years', per: '94%' },
     { title: 'MongoDB', exp: '1.4 Years', per: '90%' },
     { title: 'Firebase', exp: '1.2 Years', per: '89%' },
-  
+
     { title: 'HTML', exp: '2.0 Years', per: '96%' },
     { title: 'CSS', exp: '2.0 Years', per: '95%' },
     { title: 'Bootstrap', exp: '1.6 Years', per: '92%' },
@@ -65,18 +66,24 @@ export const skills = [
     { title: 'Angular', exp: '1.8 Years', per: '100%' },
     { title: 'React', exp: '1.7 Years', per: '92%' },
     { title: 'React Native', exp: '1.5 Years', per: '90%' },
-  
+
     { title: 'Spring Boot', exp: '1.6 Years', per: '92%' },
     { title: 'Spring Data', exp: '1.4 Years', per: '90%' },
     { title: 'Spring Security', exp: '1.3 Years', per: '91%' },
     { title: 'Microservices', exp: '1.2 Years', per: '89%' },
-  
+
     { title: 'JUnit', exp: '1.7 Years', per: '94%' },
     { title: 'Apache Kafka', exp: '1.3 Years', per: '90%' },
-  
+
     { title: 'Git', exp: '2.0 Years', per: '95%' },
     { title: 'Bitbucket', exp: '1.5 Years', per: '92%' },
     { title: 'JIRA', exp: '1.6 Years', per: '93%' },
     { title: 'Q-Test', exp: '1.2 Years', per: '88%' }
-  ];
-  
+];
+
+export const projects = [
+    { title: 'Trinethra Test Portal', time: 'Sep 2023 - Oct 2023', desc: `An Angular-based web app hosted on Firebase for seamless test creation, management, and participation. It offers a user-friendly interface, real-time synchronization, and secure authentication for efficient online testing.`, stack: ['Angular', 'HTML', 'CSS', 'TypeScript', 'Firebase', 'NoSQL', 'Node Js'], img: 'assets/img/test-portal.png' },
+    { title: 'Weather App', time: 'Jul 2023 - Aug 2023', desc: `An Angular-based application hosted on Firebase, providing accurate weather updates for cities, states, provinces, and countries. It integrates with a weather API for real-time data and forecasts.`, stack: ['Angular', 'HTML', 'CSS', 'TypeScript', 'Firebase', 'NoSQL', 'Scss', 'Weather Api', 'RxJs'], img: 'assets/img/weather app.png'},
+    { title: 'Currency Convertor', time: 'Mar 2023 - Apr 2023', desc: `A real-time application built with Angular and hosted on Firebase, offering instant currency conversion based on live exchange rates for accurate financial tracking and currency exchange.`, stack: ['Angular', 'HTML', 'TypeScript', 'Reactive Forms', 'Firebase', 'RxJs'], img: 'assets/img/currency-converter.png'},
+    { title: 'Airbus, Bus Booking System', time: 'Nov 2022 - Jan 2024', desc: `A real-time bus booking application utilizing Angular for the frontend, Spring Boot and microservices for the backend, MySQL for database management, and deployed using Jenkins and Netlify. It features seamless integration and up-to-date booking capabilities.`,stack: ['Angular', 'Spring Boot', 'Micro Services', 'MySql', 'Jenkins', 'TypeScript', 'Netify'], img: 'assets/img/airbus.png'}
+]

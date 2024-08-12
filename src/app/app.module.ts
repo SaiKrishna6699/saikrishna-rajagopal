@@ -14,6 +14,7 @@ import { AboutComponent } from './components/about/about.component';
 import { AccordianCompComponent } from './components/accordian-comp/accordian-comp.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 
 
 
@@ -26,6 +27,7 @@ import { HomeComponent } from './pages/home/home.component';
     AccordianCompComponent,
     SkillsComponent,
     HomeComponent,
+    ProjectsComponent,
   ],
   imports: [
     BrowserModule,

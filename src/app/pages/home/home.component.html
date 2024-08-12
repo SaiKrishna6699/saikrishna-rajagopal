@@ -1,11 +1,12 @@
 <div class="parent">
-    <app-intro />
-    <app-about [title]="content.a.title" [content]="content.a.content" />
-    <app-accordian-comp [title]="'Experience'" [tabs]="experience" />
-    <br/>
-    <app-accordian-comp [title]="'Education'" [tabs]="education" />
-    <br/>
-    <app-skills [title]="'Skills'" [skills]="skills"/>
-    <br>
-    <app-about [title]="content.b.title" [content]="content.b.content" />
-  </div>
+  <app-intro />
+  <app-about [title]="content.a.title" [content]="content.a.content" />
+  <app-accordian-comp [title]="'Experience'" [tabs]="experience" />
+  <br />
+  <app-accordian-comp [title]="'Education'" [tabs]="education" />
+  <br />
+  <app-skills [title]="'Skills'" [skills]="skills" />
+  <br>
+  <app-projects [title]="'My Projects'" [sub_text]="'Check out my latest work'" [text_content]="'Here are a few of my favourite'" [content]="projects" />
+  <app-about [title]="content.b.title" [content]="content.b.content" />
+</div>

@@ -51,6 +51,10 @@ html {
             fill: transparent;
         }
     }
+
+    svg.svg-link{
+        fill: var(--background-color) !important;
+    }
 }
 
 html,
