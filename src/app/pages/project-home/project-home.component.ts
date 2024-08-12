@@ -1,13 +1,12 @@
 import { trigger, transition, style, animate, keyframes } from '@angular/animations';
 import { Component } from '@angular/core';
-import { Content as con, experience as exp, education as edu, skills as sk, projects as pro } from 'src/app/models/content';
-
+import { projects as pro } from 'src/app/models/content';
 
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: 'app-project-home',
+  templateUrl: './project-home.component.html',
+  styleUrls: ['./project-home.component.scss'],
   animations: [
     trigger('lineAnimation', [
       transition(':enter', [
@@ -28,13 +27,6 @@ import { Content as con, experience as exp, education as edu, skills as sk, proj
     ])
   ]
 })
-export class HomeComponent {
-
-  content = con;
-  experience = exp;
-  education = edu;
-
-  // skills = ['Java', 'Java Script', 'Type Script', 'Angular', 'React', 'ReactNative', 'Sass/Scss', 'HTML 5', 'CSS3', 'Web Development', 'Mobile Development', 'Git', 'GitHub'];
-  skills = sk;
+export class ProjectHomeComponent {
   projects = pro;
 }
