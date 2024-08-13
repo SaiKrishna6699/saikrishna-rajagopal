@@ -13,7 +13,7 @@ export class NavBarComponent {
     
   }
 
-  isDarkTheme: boolean = false;
+  isDarkTheme: boolean = true;
 
   ngOnInit() {
     const savedTheme = localStorage.getItem('theme');
