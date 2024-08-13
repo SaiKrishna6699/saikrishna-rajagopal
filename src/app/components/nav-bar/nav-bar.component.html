@@ -16,7 +16,7 @@
                     d="M48 256L192 112 224 144 112 256 224 368 192 400 48 256ZM288 368L400 256 288 144 320 112 464 256 320 400 288 368Z" />
             </svg>
         </li>
-        <li class="nav-link" matTooltip="Contacts" [matTooltipPosition]="'above'" [matTooltipClass]="'custom-tooltip'">
+        <li class="nav-link" (click)="openBot()" matTooltip="Contacts" [matTooltipPosition]="'above'" [matTooltipClass]="'custom-tooltip'">
             <svg class="svg-c" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 24 24"
                 stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M19 22H5c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v14c0 1.1-.9 2-2 2z" />

@@ -1,0 +1,26 @@
+<div class="chat-parent">
+    <div class="header">
+        <div class="info">
+            <img class="img" src="assets/img/sai_pic.jpg" alt="">
+            <div class="name-info">
+                <p class="name">Sai Krishna's Bot</p>
+                <p class="side">Ask me a question</p>
+            </div>
+        </div>
+        <p (click)="close()" class="close">X</p>
+    </div>
+    <div class="body">
+        <div class="message">
+            <div class="msg" *ngFor="let message of messages" [ngClass]="message.type">
+                <span [innerHTML]="message.text"></span>
+            </div>
+        </div>
+        
+        <div *ngIf="optionsVisible" class="options">
+            <button *ngFor="let option of options" (click)="handleOption(option)">
+                {{ option }}
+            </button>
+        </div>
+    </div>
+    
+</div>

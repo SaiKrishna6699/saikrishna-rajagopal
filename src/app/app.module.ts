@@ -7,6 +7,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDialogModule } from '@angular/material/dialog';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { AccordionModule } from 'primeng/accordion';
 import { ButtonModule } from 'primeng/button';
@@ -17,6 +18,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectHomeComponent } from './pages/project-home/project-home.component';
 import { PhotosComponent } from './components/photos/photos.component';
+import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
 
 
 
@@ -32,6 +34,7 @@ import { PhotosComponent } from './components/photos/photos.component';
     ProjectsComponent,
     ProjectHomeComponent,
     PhotosComponent,
+    ChatBotComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,8 @@ import { PhotosComponent } from './components/photos/photos.component';
     MatTooltipModule,
     AccordionModule,
     ButtonModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

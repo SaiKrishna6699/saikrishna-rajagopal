@@ -61,3 +61,12 @@ html,
 body {
     height: 100%;
 }
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+    background-color: transparent !important;
+    margin: 0% !important;
+    padding: 0% !important;
+    color: var(--text-color) !important;
+    border: 0.1px solid var(--text-color) !important;
+    box-sizing: border-box !important;
+}
