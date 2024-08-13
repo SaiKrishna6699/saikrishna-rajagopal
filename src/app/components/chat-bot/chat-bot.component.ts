@@ -34,7 +34,7 @@ export class ChatBotComponent implements AfterViewChecked {
 
   messages: { text: string, type: 'user' | 'bot' }[] = [
     { text: 'Hi', type: 'bot' },
-    { text: `I'm Sai Bot. I'm here to help you with any questions you might have about Sai's work.`, type: 'bot' },
+    { text: `I'm Sai's Bot. I'm here to help you with any questions you might have about Sai's work.`, type: 'bot' },
     { text: `How can I help you today?`, type: 'bot' }
   ];
 

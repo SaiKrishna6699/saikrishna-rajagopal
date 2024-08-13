@@ -19,6 +19,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectHomeComponent } from './pages/project-home/project-home.component';
 import { PhotosComponent } from './components/photos/photos.component';
 import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 
 
@@ -35,6 +36,7 @@ import { ChatBotComponent } from './components/chat-bot/chat-bot.component';
     ProjectHomeComponent,
     PhotosComponent,
     ChatBotComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

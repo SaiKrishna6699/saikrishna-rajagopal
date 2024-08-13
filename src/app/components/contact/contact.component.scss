@@ -1,0 +1,61 @@
+.contact-parent {
+    width: 100%;
+    max-width: 90%;
+    margin: auto;
+    height: auto;
+    position: relative;
+    top: 14vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0px;
+
+    h3 {
+        font-size: clamp(0.9rem, 15px, 4.6rem);
+        font-weight: 500;
+        margin: 0%;
+        padding: 0%;
+        text-align: center;
+        color: var(--background-color);
+        background-color: var(--text-color);
+        border-radius: 5px;
+        padding: 0.3% 0.6%;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: clamp(2.5vw, 30px, 6.2vw);
+        font-weight: 600;
+        margin: 2.5%;
+        padding: 0%;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0.3% 0.6%;
+        margin: auto;
+    }
+
+    p.text_content {
+        font-size: clamp(0.8vw, 12px, 2.8vw);
+        font-weight: 400;
+        margin: 2.5%;
+        padding: 0%;
+        text-align: center;
+        border-radius: 5px;
+        padding: 0.3% 0.6%;
+        margin: auto;
+    }
+
+    button{
+        width: clamp(8rem, 500px, 10vw);
+        height: 1.5rem;
+        font-size: clamp(0.9rem, 15px, 4.6rem);
+        background-color: var(--text-color);
+        color: var(--background-color);
+        border-radius: 5px;
+        margin: 0% auto;
+        position: relative;
+        margin-bottom: 100px !important;
+    }
+}
