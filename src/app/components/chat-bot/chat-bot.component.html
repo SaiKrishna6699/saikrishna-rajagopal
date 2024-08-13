@@ -9,7 +9,7 @@
         </div>
         <p (click)="close()" class="close">X</p>
     </div>
-    <div class="body">
+    <div class="body" #chatContainer>
         <div class="message">
             <div class="msg" *ngFor="let message of messages" [ngClass]="message.type">
                 <span [innerHTML]="message.text"></span>

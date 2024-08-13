@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { AfterViewChecked, Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -7,7 +7,18 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./chat-bot.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class ChatBotComponent {
+export class ChatBotComponent implements AfterViewChecked {
+  @ViewChild('chatContainer') private chatContainer!: ElementRef;
+
+  ngAfterViewChecked() {
+    this.scrollToBottom();
+  }
+
+  private scrollToBottom() {
+    try {
+      this.chatContainer.nativeElement.scrollTop = this.chatContainer.nativeElement.scrollHeight;
+    } catch (err) { }
+  }
 
   options: string[] = [
     'Just Saying Hi',
@@ -49,8 +60,15 @@ export class ChatBotComponent {
       this.respondToOption(option);
     }, 500); // Adjust delay as needed
   }
+  removeOption(option: string) {
+    const index = this.options.indexOf(option);
+    if (index > -1) {
+      this.options.splice(index, 1); // Removes the item at the specified index
+    }
+  }
 
   respondToOption(option: string) {
+    this.removeOption('Just Saying Hi',)
     let response: string | string[];
     switch (option) {
       case 'Just Saying Hi':
@@ -92,14 +110,14 @@ export class ChatBotComponent {
         response = 'I didn\'t understand that option.';
         break;
     }
-  
+
     if (Array.isArray(response)) {
       response.forEach(text => this.messages.push({ text, type: 'bot' }));
     } else {
       this.messages.push({ text: response, type: 'bot' });
     }
-  
+
     this.optionsVisible = true;
   }
-  
+
 }
