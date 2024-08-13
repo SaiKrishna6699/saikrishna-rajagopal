@@ -48,15 +48,25 @@
     }
 
     button{
-        width: clamp(8rem, 500px, 10vw);
-        height: 1.5rem;
-        font-size: clamp(0.9rem, 15px, 4.6rem);
-        background-color: var(--text-color);
-        color: var(--background-color);
-        border-radius: 5px;
-        margin: 0% auto;
+        // width: clamp(8rem, 500px, 10vw);
+        // height: 1.5rem;
+        // font-size: clamp(0.9rem, 15px, 4.6rem);
+        // background-color: var(--text-color);
+        // color: var(--background-color);
+        // border-radius: 8px;
+        // margin: 0% auto;
         position: relative;
-        top: 2vh;
+        top: 2rem;
         margin-bottom: 250px !important;
+        font-size: clamp(1rem, 15px, 4.8rem);
+        font-weight: 500;
+        margin: 0%;
+        padding: 0%;
+        text-align: center;
+        color: var(--background-color);
+        background-color: var(--text-color);
+        border-radius: 5px;
+        padding: 0.3% 0.6%;
+        margin: auto;
     }
 }

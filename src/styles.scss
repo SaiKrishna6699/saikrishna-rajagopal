@@ -52,7 +52,7 @@ html {
         }
     }
 
-    svg.svg-link{
+    svg.svg-link {
         fill: var(--background-color) !important;
     }
 }
@@ -70,3 +70,23 @@ body {
     border: 0.1px solid var(--text-color) !important;
     box-sizing: border-box !important;
 }
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--text-color); 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #777; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--background-color); 
+  }

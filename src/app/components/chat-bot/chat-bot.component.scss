@@ -5,10 +5,10 @@
     backdrop-filter: blur(20px);
     // overflow-x: hidden;
     box-sizing: border-box;
-    overflow-y: auto;
+    overflow: hidden;
 
     .header {
-        position: absolute;
+        position: fixed;
         width: 95%;
         height: 3.5rem;
         background-color: var(--text-color);
@@ -17,6 +17,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         padding: 0% 5% 0% 2%;
+        top: 0%;
 
         .info {
             width: 95%;
@@ -71,13 +72,15 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        min-height: 100%;
+
     }
 
     .message {
         margin-bottom: 10px;
         display: flex;
         flex-direction: column;
+        min-height: 67vh;
+        overflow-y: auto;
     }
 
     .msg {

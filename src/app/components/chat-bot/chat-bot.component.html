@@ -15,7 +15,6 @@
                 <span [innerHTML]="message.text"></span>
             </div>
         </div>
-        
         <div *ngIf="optionsVisible" class="options">
             <button *ngFor="let option of options" (click)="handleOption(option)">
                 {{ option }}
