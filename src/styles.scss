@@ -69,6 +69,7 @@ body {
     color: var(--text-color) !important;
     border: 0.1px solid var(--text-color) !important;
     box-sizing: border-box !important;
+    overflow-y: auto;
 }
 
 ::-webkit-scrollbar {

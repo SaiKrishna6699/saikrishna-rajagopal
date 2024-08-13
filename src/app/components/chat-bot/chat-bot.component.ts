@@ -30,6 +30,7 @@ export class ChatBotComponent implements AfterViewChecked {
     'More About Me',
     'Connect with you',
     'Other inquiries',
+    'Close Bot'
   ];
 
   messages: { text: string, type: 'user' | 'bot' }[] = [
@@ -106,6 +107,10 @@ export class ChatBotComponent implements AfterViewChecked {
       case 'More About Me':
         response = 'I grew up in Tirupathi and have always had a passion for design and technology. I enjoy long drives, listening to music, and spending time in nature. I also love cats and dogs!';
         break;
+      case 'Close Bot':
+        this.close();
+        response = 'Bot Closed'
+        break
       default:
         response = 'I didn\'t understand that option.';
         break;
