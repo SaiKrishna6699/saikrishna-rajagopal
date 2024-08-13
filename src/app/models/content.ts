@@ -104,4 +104,7 @@ export const pics = [
     { type: 'image', url: 'assets/img1/14.jpeg', orientation: 'landscape' },
     { type: 'image', url: 'assets/img1/15.jpeg', orientation: 'landscape' },
     { type: 'image', url: 'assets/img1/16.jpeg', orientation: 'landscape' },
+    { type: 'image', url: 'assets/img1/17.jpeg', orientation: 'landscape' },
+    { type: 'image', url: 'assets/img1/18.jpeg', orientation: 'landscape' },
+    { type: 'image', url: 'assets/img1/19.jpeg', orientation: 'landscape' },
 ]

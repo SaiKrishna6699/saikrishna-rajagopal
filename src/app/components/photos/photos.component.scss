@@ -50,4 +50,15 @@
         margin: 1%;
         // max-height: 10rem;
     }
+
+    img.img1{
+        width: 48%;
+        height: 8.5rem !important;
+        background-size: cover;
+    }
+
+    img:last-of-type{
+        width: 100%;
+        height: auto;
+    }
 }
