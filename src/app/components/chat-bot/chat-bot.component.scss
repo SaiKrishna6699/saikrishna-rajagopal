@@ -2,7 +2,7 @@
     width: 100%;
     min-height: 100%;
     background-color: transparent;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(100px);
     // overflow-x: hidden;
     box-sizing: border-box;
     overflow-x: hidden !important;
@@ -121,6 +121,7 @@
                 margin-bottom: 5px;
                 text-align: center;
                 outline: none;
+                font-size: clamp(0.8vw, 14px, 0.8rem);
             }
 
             button:hover {
@@ -144,11 +145,8 @@
 
     .bot {
         background-color: var(--background-color);
-        /* Blue background for user messages */
         color: var(--text-color);
-        /* White text color for user messages */
         align-self: flex-start;
-        /* Align bot messages to the left */
         border: 1px solid var(--text-color);
     }
 
