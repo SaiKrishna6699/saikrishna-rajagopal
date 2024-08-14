@@ -50,22 +50,24 @@ export const education = [
 ]
 
 export const skills = [
-    { title: 'Java', exp: '2.2 Years', per: '98%' },
-    { title: 'JavaScript', exp: '2.0 Years', per: '95%' },
-    { title: 'TypeScript', exp: '1.8 Years', per: '92%' },
+    { title: 'Angular', exp: '1.8 Years', per: '95%' },
+    { title: 'HTML', exp: '2.0 Years', per: '100%' },
+    { title: 'CSS', exp: '2.0 Years', per: '98%' },
+    { title: 'Bootstrap', exp: '1.6 Years', per: '95%' },
+    { title: 'SASS/SCSS', exp: '1.3 Years', per: '94%' },
+    
+    { title: 'React', exp: '1.7 Years', per: '80%' },
+    { title: 'React Native', exp: '1.5 Years', per: '55%' },
+    { title: 'Java', exp: '2.2 Years', per: '90%' },
+    { title: 'JavaScript', exp: '2.0 Years', per: '99%' },
+    { title: 'TypeScript', exp: '1.8 Years', per: '9%5' },
     // { title: 'Python', exp: '1.5 Years', per: '91%' },
 
     { title: 'MySQL', exp: '1.7 Years', per: '94%' },
     { title: 'MongoDB', exp: '1.4 Years', per: '90%' },
     // { title: 'Firebase', exp: '1.2 Years', per: '89%' },
 
-    { title: 'HTML', exp: '2.0 Years', per: '96%' },
-    { title: 'CSS', exp: '2.0 Years', per: '95%' },
-    { title: 'Bootstrap', exp: '1.6 Years', per: '92%' },
-    { title: 'SASS/SCSS', exp: '1.3 Years', per: '91%' },
-    { title: 'Angular', exp: '1.8 Years', per: '100%' },
-    { title: 'React', exp: '1.7 Years', per: '75%' },
-    { title: 'React Native', exp: '1.5 Years', per: '40%' },
+    
 
     { title: 'Spring Boot', exp: '1.6 Years', per: '92%' },
     { title: 'Spring Data', exp: '1.4 Years', per: '90%' },
@@ -76,7 +78,7 @@ export const skills = [
     { title: 'Apache Kafka', exp: '1.3 Years', per: '90%' },
 
     { title: 'Git', exp: '2.0 Years', per: '95%' },
-    { title: 'Bitbucket', exp: '1.5 Years', per: '92%' },
+    { title: 'Bitbucket', exp: '1.5 Years', per: '95%' },
     // { title: 'JIRA', exp: '1.6 Years', per: '93%' },
     // { title: 'Q-Test', exp: '1.2 Years', per: '88%' }
 ];

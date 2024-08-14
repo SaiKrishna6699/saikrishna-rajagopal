@@ -12,7 +12,11 @@ import { MatDialogRef } from '@angular/material/dialog';
         style({ transform: 'translateY(-1rem)', opacity: 0, filter: 'blur(10px)' }),
         animate('1s ease-out', style({ transform: 'translateY(0%)', opacity: 1, filter: 'blur(0)' }))
       ]),
-    ])
+      transition(':leave', [
+        style({ transform: 'translateY(0)', opacity: 1, filter: 'blur(0)' }),
+        animate('1s ease-in', style({ transform: 'translateY(-1rem)', opacity: 0, filter: 'blur(10px)' }))
+      ])
+    ]),
   ],
   encapsulation: ViewEncapsulation.None
 })
