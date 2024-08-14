@@ -1,6 +1,6 @@
 <div class="photos-parent">
-    <h3>{{title}}</h3>
-    <!-- <div class="collage-container">
+  <h3>{{title}}</h3>
+  <!-- <div class="collage-container">
         <div *ngFor="let media of mediaItems" class="collage-item" [ngClass]="{
           'landscape': media.orientation === 'landscape',
           'portrait': media.orientation === 'portrait',
@@ -11,20 +11,23 @@
         </div>
       </div> -->
 
-    <div class="collage-container">
-        <video [attr.src]="safeVideoUrl" [src]="safeVideoUrl" [title]="'Video: Kodugu Hills'" autoplay loop muted playsinline></video>
-        <img [src]="mediaItems[10].url" alt="collage image" [title]="'Shenanigans from Chikmagalur.'" >
-        <img [src]="mediaItems[12].url" alt="collage image" [title]="'My world revolves around ❤️'">
-        <img [src]="mediaItems[7].url" alt="collage image" [title]="'Munnar Sunset view from Tea Estates'">
-        <img [src]="mediaItems[14].url" alt="collage image" [title]="'One of those days clear sky in Bangalore'">
-        <video [attr.src]="safeVideoUrl1" [src]="safeVideoUrl1" autoplay loop muted playsinline [title]="'Nandi Hills Sunrise video'"></video>
-        <img [src]="mediaItems[3].url" alt="collage image" [title]="'My Boy ❤️'">
-        <img [src]="mediaItems[17].url" alt="collage image" [title]="'From my hometown Tirupathi, Natural rock formation in shape for Garuda'">
-        <img [src]="mediaItems[9].url" alt="collage image" [title]="'Dussehra eve Mysore Palace, Karnataka'">
-        <img [src]="mediaItems[16].url" alt="collage image" [title]="'Dussehra eve Mysore Palace, Karnataka'">
-        <img [src]="mediaItems[15].url" alt="collage image" [title]="'Belur, KA'">
-        <img class="img1" [src]="mediaItems[13].url" alt="collage image">
-        <img [src]="mediaItems[8].url" alt="collage image" [title]="'View From Ettinabhuja, Karnataka'">
-    </div>
+  <div class="collage-container">
+    <video #videoElement [attr.src]="safeVideoUrl" [src]="safeVideoUrl" [title]="'Video: Kodugu Hills'" autoplay loop
+      muted playsinline (mouseenter)="onMouseEnter()" (click)="onClick()"></video>
+    <img [src]="mediaItems[10].url" alt="collage image" [title]="'Shenanigans from Chikmagalur.'">
+    <img [src]="mediaItems[12].url" alt="collage image" [title]="'My world revolves around ❤️'">
+    <img [src]="mediaItems[7].url" alt="collage image" [title]="'Munnar Sunset view from Tea Estates'">
+    <img [src]="mediaItems[14].url" alt="collage image" [title]="'One of those days clear sky in Bangalore'">
+    <video #videoElement1 [attr.src]="safeVideoUrl1" [src]="safeVideoUrl1" autoplay loop muted playsinline
+      [title]="'Nandi Hills Sunrise video'" (mouseenter)="onMouseEnter1()" (click)="onClick1()"></video>
+    <img [src]="mediaItems[3].url" alt="collage image" [title]="'My Boy ❤️'">
+    <img [src]="mediaItems[17].url" alt="collage image"
+      [title]="'From my hometown Tirupathi, Natural rock formation in shape for Garuda'">
+    <img [src]="mediaItems[9].url" alt="collage image" [title]="'Dussehra eve Mysore Palace, Karnataka'">
+    <img [src]="mediaItems[16].url" alt="collage image" [title]="'Dussehra eve Mysore Palace, Karnataka'">
+    <img [src]="mediaItems[15].url" alt="collage image" [title]="'Belur, KA'">
+    <img class="img1" [src]="mediaItems[13].url" alt="collage image">
+    <img [src]="mediaItems[8].url" alt="collage image" [title]="'View From Ettinabhuja, Karnataka'">
+  </div>
 
 </div>
