@@ -5,15 +5,15 @@
     backdrop-filter: blur(20px);
     // overflow-x: hidden;
     box-sizing: border-box;
-    overflow-x: hidden;
-    overflow: auto;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
 
-    *{
+    * {
         overflow-x: hidden;
     }
 
     .header {
-        position: fixed;
+        position: absolute;
         width: 95%;
         height: 3.5rem;
         background-color: var(--text-color);
@@ -71,6 +71,8 @@
     }
 
     .body {
+        // width: 100%;
+        height: calc(100%);
         padding: 10px;
         position: relative;
         top: 4rem;
@@ -79,36 +81,64 @@
         flex-direction: column;
         overflow-x: hidden;
         overflow-y: auto;
+        margin-bottom: 1vw;
+
+        .message {
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            min-height: 50vh;
+            // max-height: 100%;
+            overflow-y: auto;
+
+            .msg {
+                padding: 8px;
+                border-radius: 4px;
+                margin-bottom: 5px;
+                max-width: 60%;
+                word-wrap: break-word;
+                font-size: clamp(0.8vw, 14px, 0.8rem);
+                line-height: 1.4;
+            }
+        }
+
+        .options {
+            display: flex;
+            margin-top: 10px;
+            flex-wrap: wrap;
+            gap: clamp(0.3rem, 5px, 0.6rem);
+            position: relative;
+            bottom: 0%;
+            // top: 10%;
+
+            button {
+                padding: 10px;
+                border: none;
+                border-radius: 4px;
+                background-color: var(--text-color);
+                color: var(--background-color);
+                cursor: pointer;
+                margin-bottom: 5px;
+                text-align: center;
+                outline: none;
+            }
+
+            button:hover {
+                background-color: var(--background-color);
+                color: var(--text-color);
+            }
+        }
 
     }
 
-    .message {
-        margin-bottom: 10px;
-        display: flex;
-        flex-direction: column;
-        min-height: 50vh;
-        max-height: 100%;
-        overflow-y: auto;
-    }
 
-    .msg {
-        padding: 8px;
-        border-radius: 4px;
-        margin-bottom: 5px;
-        max-width: 60%;
-        word-wrap: break-word;
-        font-size: 14px;
-        line-height: 1.4;
-    }
+
+
 
     .user {
-
         background-color: var(--text-color);
-        /* Light gray background for bot messages */
         color: var(--background-color);
-        /* Black text color for bot messages */
         align-self: flex-end;
-        /* Align user messages to the right */
         border: 1px solid var(--background-color);
     }
 
@@ -122,32 +152,9 @@
         border: 1px solid var(--text-color);
     }
 
-    .options {
-        display: flex;
-        margin-top: 10px;
-        flex-wrap: wrap;
-        gap: clamp(0.3rem, 5px, 0.6rem);
-        position: relative;
-        bottom: 0%;
-        // top: 100%;
-    }
 
-    button {
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-        background-color: var(--text-color);
-        color: var(--background-color);
-        cursor: pointer;
-        margin-bottom: 5px;
-        text-align: center;
-        outline: none;
-    }
 
-    button:hover {
-        background-color: var(--background-color);
-        color: var(--text-color);
-    }
+
 
 }
 

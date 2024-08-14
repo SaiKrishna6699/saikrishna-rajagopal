@@ -49,15 +49,15 @@
 
     .main1 {
         width: 100%;
-        margin: 1rem auto;
+        margin: 0.5rem auto;
         display: grid;
         align-items: center;
         justify-items: center;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1rem;
+        gap: 2rem;
 
         .project {
-            width: clamp(20vw, 300px, 13rem);
+            width: clamp(22vw, 500px, 18rem);
             min-height: 350px;
             height: 500px;
             border: 0.1px solid rgba(75, 75, 75, 0.5);

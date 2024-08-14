@@ -42,18 +42,62 @@
         justify-content: flex-start;
         gap: 0.5rem;
         margin: 0%;
-        &:hover{
-            transform: scaleX(1.005);
+
+        &:hover {
+            .blocks {
+                animation: animateBg 1.8s linear infinite;
+                background-size: 200% 100%;
+                &:hover {
+                    animation: scaleBlocks 0.5s ease-in-out forwards;
+
+                    @keyframes scaleBlocks {
+                        0% {
+                            transform: scaleX(1);
+                        }
+
+                        50% {
+                            transform: scaleX(1.01);
+                        }
+                        100% {
+                            transform: scaleX(1);
+                        }
+                    }
+                    &:nth-of-type(1) {
+                        animation-delay: 0s;
+                    }
+
+                    &:nth-of-type(2) {
+                        animation-delay: 0.5s;
+                    }
+
+                    &:nth-of-type(3) {
+                        animation-delay: 1s;
+                    }
+
+                    &:nth-of-type(4) {
+                        animation-delay: 1.5s;
+                    }
+
+                    &:nth-of-type(5) {
+                        animation-delay: 2s;
+                    }
+
+                    &:nth-of-type(6) {
+                        animation-delay: 2.5s;
+                    }
+                }
+            }
         }
     }
 
     .blocks {
         animation: animateBg 1.8s linear infinite;
         background-size: 200% 100%;
-        &:hover{
+
+        &:hover {
             transform: scaleX(1.01);
 
-            &:first-of-type{
+            &:first-of-type {
                 transform: scaleX(1);
             }
         }
@@ -84,23 +128,31 @@
     .line2,
     .line4 {
         .blocks {
-            width: clamp(45vw, 850px, 10rem);
+            width: clamp(40vw, 800px, 8rem);
             height: clamp(1vw, 10px, 1rem);
             background-image: linear-gradient(to right, #ff2063, #0F84EE, #ff2063, #0F84EE);
             border-radius: 2px;
         }
     }
 
+    .line2 {
+        .blocks {
+            width: clamp(40vw, 800px, 8rem);
+        }
+    }
+
     .line5 {
-        padding-left: 5% !important;
+        padding-left: 10% !important;
     }
 
     .line4 .blocks {
         width: clamp(45vw, 150px, 10rem);
-        margin-left: 10% !important;
+        margin-left: 7% !important;
     }
 
     .line3 {
+        padding-left: 3%;
+
         .blocks {
             background-image: linear-gradient(to right, #DB5779, #FF8000, #DB5779, #FF8000);
             width: clamp(8vw, 100px, 3rem);
@@ -129,7 +181,6 @@
         }
     }
 
-
     .main {
         width: 100%;
         height: auto;
@@ -137,6 +188,7 @@
         flex-direction: row-reverse;
         align-items: space-between;
         justify-content: space-between;
+        margin-left: 2vw;
     }
 
     .img {

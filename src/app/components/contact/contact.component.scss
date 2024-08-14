@@ -58,15 +58,22 @@
         position: relative;
         top: 2rem;
         margin-bottom: 250px !important;
-        font-size: clamp(1rem, 15px, 4.8rem);
-        font-weight: 500;
+        font-size: clamp(0.8rem, 12px, 4.2rem);
+        font-weight: 600;
         margin: 0%;
         padding: 0%;
         text-align: center;
         color: var(--background-color);
         background-color: var(--text-color);
         border-radius: 5px;
-        padding: 0.3% 0.6%;
+        padding: 0.5% 0.6%;
         margin: auto;
+        border: none;
+        transition: transform 1.2 ease-in-out;
+
+        &:hover{
+            transform: scale(1.05);
+            transition: transform 1.2 ease-in-out;
+        }
     }
 }

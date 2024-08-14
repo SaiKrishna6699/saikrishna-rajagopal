@@ -70,6 +70,7 @@ body {
     border: 0.1px solid var(--text-color) !important;
     box-sizing: border-box !important;
     overflow-y: auto;
+    overflow-x: hidden !important;
 }
 
 ::-webkit-scrollbar {

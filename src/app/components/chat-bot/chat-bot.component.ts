@@ -1,3 +1,4 @@
+import { trigger, transition, style, animate } from '@angular/animations';
 import { AfterViewChecked, Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
@@ -5,6 +6,14 @@ import { MatDialogRef } from '@angular/material/dialog';
   selector: 'app-chat-bot',
   templateUrl: './chat-bot.component.html',
   styleUrls: ['./chat-bot.component.scss'],
+  animations: [
+    trigger('loadBot', [
+      transition(':enter', [
+        style({ transform: 'translateY(-1rem)', opacity: 0, filter: 'blur(10px)' }),
+        animate('1s ease-out', style({ transform: 'translateY(0%)', opacity: 1, filter: 'blur(0)' }))
+      ]),
+    ])
+  ],
   encapsulation: ViewEncapsulation.None
 })
 export class ChatBotComponent implements AfterViewChecked {
