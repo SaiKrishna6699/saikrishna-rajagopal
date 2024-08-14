@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Content as con, experience as exp, education as edu, skills as sk } from './models/content';
+import { Component, HostListener } from '@angular/core';
 
 
 
@@ -12,10 +11,15 @@ import { Content as con, experience as exp, education as edu, skills as sk } fro
 export class AppComponent {
   title = 'SaiKrishna';
 
-  content = con;
-  experience = exp;
-  education = edu;
+  @HostListener('window:scroll', ['$event'])
+  onScroll(event: Event): void {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPosition = window.scrollY;
+    const scrollPercentage = (scrollPosition / totalHeight) * 100;
 
-  // skills = ['Java', 'Java Script', 'Type Script', 'Angular', 'React', 'ReactNative', 'Sass/Scss', 'HTML 5', 'CSS3', 'Web Development', 'Mobile Development', 'Git', 'GitHub'];
-  skills = sk;
+    const progressBar = document.querySelector('.progress-bar') as HTMLElement;
+    if (progressBar) {
+      progressBar.style.width = `${scrollPercentage}%`;
+    }
+  }
 }
