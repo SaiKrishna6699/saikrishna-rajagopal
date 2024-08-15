@@ -21,6 +21,10 @@ export class PhotosComponent implements OnInit{
   ngOnInit(): void {
     this.safeVideoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.mediaItems[5].url);
     this.safeVideoUrl1 = this.sanitizer.bypassSecurityTrustResourceUrl(this.mediaItems[6].url);
+    setTimeout(()=>{
+      this.onClick();
+      this.onClick1();
+    },2000)
   }
 
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
