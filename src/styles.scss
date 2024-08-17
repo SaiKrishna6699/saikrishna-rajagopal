@@ -55,6 +55,11 @@ html {
     svg.svg-link {
         fill: var(--background-color) !important;
     }
+
+    svg.bot-close{
+        fill: var(--background-color) !important;
+        stroke: var(--background-color) !important;
+    }
 }
 
 html,

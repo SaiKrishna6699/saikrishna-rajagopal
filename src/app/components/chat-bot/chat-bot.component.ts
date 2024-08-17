@@ -23,6 +23,32 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class ChatBotComponent implements AfterViewChecked {
   @ViewChild('chatContainer') private chatContainer!: ElementRef;
 
+  options: string[] = [
+    'Just Saying Hi',
+    'Learn about Sai Krishna\'s work',
+    'About Sai Krishna',
+    'Sai\'s Education',
+    'Sai\'s Experience',
+    'Sai\'s Skills',
+    'Sai\'s Projects',
+    'Sai\'s Achievements',
+    'Sai Krishna\'s Work Culture',
+    'More About Sai Krishna',
+    'Connect with Sai Krishna',
+    'Other inquiries',
+    'Close Bot'
+  ];
+
+  messages: { text: string, type: 'user' | 'bot' }[] = [
+    { text: 'Hi', type: 'bot' },
+    { text: `Hello! I'm the chatbot for Sai Krishna. How can I assist you today?`, type: 'bot' },
+    { text: `Feel free to choose an option from the list to learn more about Sai Krishna.`, type: 'bot' }
+  ];
+
+  optionsVisible: boolean = true;
+
+  constructor(public dialogRef: MatDialogRef<ChatBotComponent>) {}
+
   ngAfterViewChecked() {
     this.scrollToBottom();
   }
@@ -30,102 +56,79 @@ export class ChatBotComponent implements AfterViewChecked {
   private scrollToBottom() {
     try {
       this.chatContainer.nativeElement.scrollTop = this.chatContainer.nativeElement.scrollHeight;
-    } catch (err) { }
+    } catch (err) {
+      console.error('Scroll to bottom failed', err);
+    }
   }
-
-  options: string[] = [
-    'Just Saying Hi',
-    'Learn about Sai\'s work',
-    'About Sai Krishna',
-    'My Experience',
-    'My Skills',
-    'My Projects',
-    'More About Me',
-    'Connect with you',
-    'Other inquiries',
-    'Close Bot'
-  ];
-
-  messages: { text: string, type: 'user' | 'bot' }[] = [
-    { text: 'Hi', type: 'bot' },
-    { text: `I'm Sai's Bot. I'm here to help you with any questions you might have about Sai's work.`, type: 'bot' },
-    { text: `How can I help you today?`, type: 'bot' }
-  ];
-
-  optionsVisible: boolean = true;
-  userMessage: string[] = [];
-
-  constructor(public dialogRef: MatDialogRef<ChatBotComponent>) { }
 
   close() {
     this.dialogRef.close();
   }
 
   handleOption(option: string) {
-    // Add the user's message
-    this.userMessage.push(option);
-    this.messages.push({ text: `${option}`, type: 'user' });
-
-    // Hide options
+    this.messages.push({ text: option, type: 'user' });
     this.optionsVisible = false;
 
-    // Respond with bot message after a short delay
     setTimeout(() => {
       this.respondToOption(option);
     }, 500); // Adjust delay as needed
   }
-  removeOption(option: string) {
-    const index = this.options.indexOf(option);
-    if (index > -1) {
-      this.options.splice(index, 1); // Removes the item at the specified index
-    }
-  }
 
-  respondToOption(option: string) {
-    this.removeOption('Just Saying Hi',)
+  private respondToOption(option: string) {
+    this.options = this.options.filter(opt => opt !== 'Just Saying Hi');
     let response: string | string[];
+
     switch (option) {
       case 'Just Saying Hi':
         response = 'Hello there! How can I assist you today?';
         break;
-      case 'Connect with you':
+      case 'Connect with Sai Krishna':
         response = [
-          'I\'m here to help with Sai\'s work. Please let me know what you need.',
-          'You can connect with me on Instagram and LinkedIn.',
-          'Instagram: <a href="https://www.instagram.com/saikrishna.rajagopal/" target="_blank" rel="noopener noreferrer">My Instagram</a>',
-          'LinkedIn: <a href="https://www.linkedin.com/in/saikrishna-rajagopal/" target="_blank" rel="noopener noreferrer">My LinkedIn</a>'
+          'I\'m here to assist with information about Sai Krishna. You can connect with him on the following platforms:',
+          'Instagram: <a href="https://www.instagram.com/saikrishna.rajagopal/" target="_blank" rel="noopener noreferrer">Sai Krishna\'s Instagram</a>',
+          'LinkedIn: <a href="https://www.linkedin.com/in/saikrishna-rajagopal/" target="_blank" rel="noopener noreferrer">Sai Krishna\'s LinkedIn</a>',
+          'Feel free to reach out via these links!'
         ];
         break;
-      case 'Learn about Sai\'s work':
-        response = 'Sai is working on several exciting projects. What would you like to know more about?';
+      case 'Learn about Sai Krishna\'s work':
+        response = 'Sai Krishna is involved in a variety of innovative projects. Is there a specific project or area of his work that interests you?';
+        break;
+      case 'About Sai Krishna':
+        response = 'Sai Krishna is a Full Stack Developer with a Bachelor’s degree in Computer Science and Engineering from Hindustan Institute of Technology and Science. He has a solid foundation in both front-end and back-end technologies and is passionate about creating user-centric web applications.';
+        break;
+      case 'Sai\'s Education':
+        response = 'Sai Krishna earned his Bachelor of Technology in Computer Science and Engineering from Hindustan Institute of Technology and Science, Chennai. He graduated with a GPA of 8.1/10 and studied key areas like Web Programming, Agile Methodologies, and Database Management Systems.';
+        break;
+      case 'Sai\'s Experience':
+        response = 'Sai Krishna is currently a Software Engineer at Relanto.ai, where he works on developing web applications and integrating security features. Previously, he was an Associate Software Engineer at Mphasis LTD, focusing on front-end development and API testing for a US brokerage application.';
+        break;
+      case 'Sai\'s Skills':
+        response = 'Sai Krishna is skilled in a wide range of technologies including Java, JavaScript, TypeScript, Python, MySQL, MongoDB, Angular, React, and Spring Boot. He is also proficient in using tools like Git, Bitbucket, and JIRA for development and project management.';
+        break;
+      case 'Sai\'s Projects':
+        response = 'Sai Krishna has worked on several impactful projects such as a Bus Booking System, a Realtime Currency Converter Application, and a Weather Forecast Application. These projects demonstrate his ability to build robust and user-friendly web applications using various technologies.';
+        break;
+      case 'Sai\'s Achievements':
+        response = 'Sai Krishna has made significant contributions to various projects, including developing a complex search interface for Cisco and optimizing APIs for improved performance. His achievements reflect his dedication to delivering high-quality solutions and enhancing user experiences.';
+        break;
+      case 'Sai Krishna\'s Work Culture':
+        response = 'Sai Krishna values a collaborative and innovative work environment. He believes in continuous learning and applying new technologies to solve problems effectively. His approach to work emphasizes teamwork, creativity, and professional growth.';
+        break;
+      case 'More About Sai Krishna':
+        response = 'Sai Krishna grew up in Tirupathi and has a keen interest in design and technology. Outside of work, he enjoys long drives, listening to music, and spending time in nature. He also has a love for cats and dogs.';
         break;
       case 'Other inquiries':
         response = [
-          'Feel free to ask any other questions you might have!',
-          'You can reach me via email at <a href="mailto:saikrishnarajagopal@gmail.com">Email me</a>.'
+          'If you have other questions or need further information, feel free to ask!',
+          'You can also contact Sai Krishna directly via email at <a href="mailto:saikrishnarajagopal@gmail.com">Email Sai Krishna</a>.'
         ];
-        break;
-      case 'About Sai Krishna':
-        response = 'I\'m a Full Stack Developer dedicated to crafting immersive, user-centric web applications. I started my career in software development at the end of 2021 and have experience in both front-end and back-end development.';
-        break;
-      case 'My Experience':
-        response = 'I currently work at Relanto.ai as a Software Engineer, developing web applications and integrating security features. Previously, I worked at Mphasis LTD as an Associate Software Engineer, focusing on front-end development and API testing.';
-        break;
-      case 'My Skills':
-        response = 'I am skilled in Java, JavaScript, TypeScript, Python, MySQL, MongoDB, Angular, React, and many other technologies. Click on a skill to see my proficiency percentage.';
-        break;
-      case 'My Projects':
-        response = 'I have worked on several projects including a test portal, weather app, currency converter, and a bus booking system. Each project showcases different aspects of my development skills and interests.';
-        break;
-      case 'More About Me':
-        response = 'I grew up in Tirupathi and have always had a passion for design and technology. I enjoy long drives, listening to music, and spending time in nature. I also love cats and dogs!';
         break;
       case 'Close Bot':
         this.close();
-        response = 'Bot Closed'
-        break
+        response = 'Thank you for chatting! If you have any more questions in the future, feel free to reach out. Goodbye!';
+        break;
       default:
-        response = 'I didn\'t understand that option.';
+        response = 'I didn\'t quite understand that. Could you please select an option from the list?';
         break;
     }
 
@@ -137,5 +140,4 @@ export class ChatBotComponent implements AfterViewChecked {
 
     this.optionsVisible = true;
   }
-
 }

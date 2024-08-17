@@ -1,30 +1,29 @@
 <div class="chat-parent" [@loadBot]>
     <div class="header">
-        <div class="info">
-            <img class="img" src="assets/img/sai_pic.jpg" alt="">
-            <div class="name-info">
-                <p class="name">Sai Krishna's Bot</p>
-                <p class="side">Ask me a question</p>
-            </div>
+      <div class="info">
+        <img class="img" src="assets/img/sai_pic.jpg" alt="">
+        <div class="name-info">
+          <p class="name">Sai Krishna's Bot</p>
+          <p class="side">Ask me a question</p>
         </div>
-        <p (click)="close()" class="close">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M18 6 6 18M6 6l12 12" />
-            </svg>
-        </p>
+      </div>
+      <p (click)="close()" class="close">
+        <svg class="bot-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18M6 6l12 12"/>
+        </svg>
+      </p>
     </div>
     <div class="body" #chatContainer>
-        <div class="message">
-            <div class="msg" *ngFor="let message of messages" [ngClass]="message.type">
-                <span [innerHTML]="message.text"></span>
-            </div>
+      <div class="message">
+        <div class="msg" *ngFor="let message of messages" [ngClass]="message.type">
+          <span [innerHTML]="message.text"></span>
         </div>
-        <div *ngIf="optionsVisible" class="options">
-            <button *ngFor="let option of options" (click)="handleOption(option)">
-                {{ option }}
-            </button>
-        </div>
+      </div>
+      <div *ngIf="optionsVisible" class="options">
+        <button *ngFor="let option of options" (click)="handleOption(option)">
+          {{ option }}
+        </button>
+      </div>
     </div>
-
-</div>
+  </div>
