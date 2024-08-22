@@ -35,8 +35,8 @@ export class NavBarComponent {
 
   openBot(): void {
     const dialogConfig = new MatDialogConfig();
-    dialogConfig.width = 'clamp(30vw, 300px, 40rem)';
-    dialogConfig.height = '87vh';
+    dialogConfig.width = 'clamp(30vw, 400px, 40rem)';
+    dialogConfig.height = '80vh';
     dialogConfig.position = {
       top: '2vh',
       right: '2vw'

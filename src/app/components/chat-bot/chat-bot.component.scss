@@ -127,6 +127,7 @@
             button:hover {
                 background-color: var(--background-color);
                 color: var(--text-color);
+                border: 0.1px solid var(--text-color);
             }
         }
 

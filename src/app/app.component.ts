@@ -1,7 +1,5 @@
 import { Component, HostListener } from '@angular/core';
-
-
-
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +8,15 @@ import { Component, HostListener } from '@angular/core';
 })
 export class AppComponent {
   title = 'SaiKrishna';
+
+  constructor(private router: Router) { }
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        window.scrollTo(0, 0);
+      }
+    });
+  }
 
   @HostListener('window:scroll', ['$event'])
   onScroll(event: Event): void {
