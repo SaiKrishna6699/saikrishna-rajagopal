@@ -47,7 +47,7 @@ export class ChatBotComponent implements AfterViewChecked {
 
   optionsVisible: boolean = true;
 
-  constructor(public dialogRef: MatDialogRef<ChatBotComponent>) {}
+  constructor(public dialogRef: MatDialogRef<ChatBotComponent>) { }
 
   ngAfterViewChecked() {
     this.scrollToBottom();
@@ -55,11 +55,14 @@ export class ChatBotComponent implements AfterViewChecked {
 
   private scrollToBottom() {
     try {
-      this.chatContainer.nativeElement.scrollTop = this.chatContainer.nativeElement.scrollHeight;
+      const element = this.chatContainer.nativeElement;
+      console.log('scrollTop:', element.scrollTop, 'scrollHeight:', element.scrollHeight);
+      element.scrollTop = element.scrollHeight;
     } catch (err) {
       console.error('Scroll to bottom failed', err);
     }
   }
+  
 
   close() {
     this.dialogRef.close();
@@ -139,5 +142,8 @@ export class ChatBotComponent implements AfterViewChecked {
     }
 
     this.optionsVisible = true;
+    setTimeout(() => {
+      this.scrollToBottom();
+    }, 0);
   }
 }

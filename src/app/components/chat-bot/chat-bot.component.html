@@ -1,29 +1,48 @@
 <div class="chat-parent" [@loadBot]>
-    <div class="header">
-      <div class="info">
-        <img class="img" src="assets/img/sai_pic.jpg" alt="">
-        <div class="name-info">
-          <p class="name">Sai Krishna's Bot</p>
-          <p class="side">Ask me a question</p>
-        </div>
+  <!-- <div class="drag">
+    <svg width="20px" height="20px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <g id="Layer_2" data-name="Layer 2">
+        <g id="invisible_box" data-name="invisible box">
+          <rect width="48" height="48" fill="none" />
+        </g>
+        <g id="Icons">
+          <g>
+            <circle cx="18" cy="12" r="4" />
+            <circle cx="18" cy="24" r="4" />
+            <circle cx="18" cy="36" r="4" />
+            <circle cx="30" cy="12" r="4" />
+            <circle cx="30" cy="24" r="4" />
+            <circle cx="30" cy="36" r="4" />
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div> -->
+  <div class="header">
+    <div class="info">
+      <img class="img" src="assets/img/sai_pic.jpg" alt="">
+      <div class="name-info">
+        <p class="name">Sai Krishna's Bot</p>
+        <p class="side">Ask me a question</p>
       </div>
-      <p (click)="close()" class="close">
-        <svg class="bot-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M18 6 6 18M6 6l12 12"/>
-        </svg>
-      </p>
     </div>
-    <div class="body" #chatContainer>
-      <div class="message">
-        <div class="msg" *ngFor="let message of messages" [ngClass]="message.type">
-          <span [innerHTML]="message.text"></span>
-        </div>
+    <p (click)="close()" class="close">
+      <svg class="bot-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M18 6 6 18M6 6l12 12" />
+      </svg>
+    </p>
+  </div>
+  <div class="body" >
+    <div class="message" #chatContainer>
+      <div class="msg" *ngFor="let message of messages" [ngClass]="message.type">
+        <span [innerHTML]="message.text"></span>
       </div>
-      <div *ngIf="optionsVisible" class="options">
-        <button *ngFor="let option of options" (click)="handleOption(option)">
-          {{ option }}
-        </button>
-      </div>
+    </div>
+    <div class="options">
+      <button *ngFor="let option of options" (click)="handleOption(option)">
+        {{ option }}
+      </button>
     </div>
   </div>
+</div>

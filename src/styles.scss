@@ -56,7 +56,7 @@ html {
         fill: var(--background-color) !important;
     }
 
-    svg.bot-close{
+    svg.bot-close {
         fill: var(--background-color) !important;
         stroke: var(--background-color) !important;
     }
@@ -69,31 +69,62 @@ body {
 
 .mat-mdc-dialog-container .mdc-dialog__surface {
     background-color: transparent !important;
-    margin: 0% !important;
-    padding: 0% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     color: var(--text-color) !important;
     border: 0.1px solid var(--text-color) !important;
     box-sizing: border-box !important;
-    overflow-y: auto;
-    overflow-x: hidden !important;
-}
+    overflow: hidden; /* Ensure the parent doesn't scroll */
+  
+    // .drag {
+    //   position: fixed;
+    //   top: 0;
+    //   left: 0;
+    //   z-index: 1000;
+    // }
+  
+    .header {
+      position: fixed;
+      top: 0%;
+      left: 0;
+      z-index: 999;
+    }
+  
+    .body {
+      position: absolute;
+      top: 15%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 1rem;
+      box-sizing: border-box;
+      height: calc(100% - 15%);
+    }
+  }
+// .ng-tns-c1922292505-4.ng-star-inserted {
+//     overflow-x: hidden;
+//     overflow-y: auto;
+//     background-color: red;
+// }
 
 ::-webkit-scrollbar {
     width: 5px;
     border-radius: 20px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: var(--text-color); 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #777; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--background-color); 
-  }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--text-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #777;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--background-color);
+}
