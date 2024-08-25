@@ -77,8 +77,6 @@
             }
         }
 
-
-
         p.close {
             color: var(--background-color);
             cursor: pointer;
@@ -86,11 +84,12 @@
     }
 
     .body {
-        height: 100%;
-        /* Ensures body takes full height of the container */
-        padding: 10px;
+        height: 105%;
+        // padding: 10px;
         position: relative;
-        top: 4rem;
+        // top: 4rem;
+        margin-top: -5%;
+        // background-color: red;
         display: flex;
         flex-direction: column;
         overflow-x: hidden;

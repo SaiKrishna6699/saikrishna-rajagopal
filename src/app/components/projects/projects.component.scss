@@ -68,6 +68,10 @@
 
             margin-left: -2%;
 
+            &:nth-of-type(even) .project-header {
+                background-image: linear-gradient(to right, #abe5a1, #0F84EE);
+            }
+
             &:hover {
                 .project-header img {
                     position: relative;
@@ -98,10 +102,6 @@
                     transition: transform 0.5s ease-in-out;
                 }
 
-            }
-
-            .project-header:nth-of-type(even) {
-                background-image: linear-gradient(to right, #f9e63e 0%, #9dff00 100%);
             }
 
             .project-body {

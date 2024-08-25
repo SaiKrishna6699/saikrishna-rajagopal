@@ -74,35 +74,37 @@ body {
     color: var(--text-color) !important;
     border: 0.1px solid var(--text-color) !important;
     box-sizing: border-box !important;
-    overflow: hidden; /* Ensure the parent doesn't scroll */
-  
+    overflow: hidden;
+    /* Ensure the parent doesn't scroll */
+
     // .drag {
     //   position: fixed;
     //   top: 0;
     //   left: 0;
     //   z-index: 1000;
     // }
-  
+
     .header {
-      position: fixed;
-      top: 0%;
-      left: 0;
-      z-index: 999;
+        position: fixed;
+        top: 0%;
+        left: 0;
+        z-index: 999;
     }
-  
+
     .body {
-      position: absolute;
-      top: 15%;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      overflow-y: auto;
-      overflow-x: hidden;
-      padding: 1rem;
-      box-sizing: border-box;
-      height: calc(100% - 15%);
+        position: absolute;
+        top: 15%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 1rem;
+        box-sizing: border-box;
+        height: calc(100% - 15%);
     }
-  }
+}
+
 // .ng-tns-c1922292505-4.ng-star-inserted {
 //     overflow-x: hidden;
 //     overflow-y: auto;
@@ -127,4 +129,19 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: var(--background-color);
+}
+
+.panel-class {
+    pointer-events: auto;
+    /* Allow interaction within the dialog */
+}
+
+.cdk-overlay-pane {
+    pointer-events: none;
+    /* Allow interaction outside the dialog */
+}
+
+.cdk-overlay-pane .panel-class {
+    pointer-events: auto;
+    /* Enable interaction inside the dialog content */
 }

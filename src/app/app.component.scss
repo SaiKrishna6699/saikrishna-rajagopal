@@ -8,10 +8,10 @@
 }
 
 .progress-bar {
-    animation: animateBg 1.8s linear infinite;
+    animation: animateBg 2.5s linear infinite;
     height: 100%;
     width: 0;
-    background: linear-gradient(to right, #DB5779, #FF8000, #DB5779, #FF8000);
+    background: linear-gradient(to right, #DB5779, #FF8000, #ABE5A1, #0F84EE);
     transition: width 0.2s ease;
 }
 

@@ -9,24 +9,26 @@ import { ChatBotComponent } from '../chat-bot/chat-bot.component';
 })
 export class NavBarComponent {
 
-  constructor(public dialog: MatDialog){
-    
-  }
-
   isDarkTheme: boolean = true;
 
+  constructor(public dialog: MatDialog) { }
+
   ngOnInit() {
+    // Get the saved theme from local storage or default to dark
     const savedTheme = localStorage.getItem('theme');
-    this.isDarkTheme = savedTheme === 'dark';
-    document.body.classList.toggle('dark-theme', this.isDarkTheme);
-    document.body.classList.toggle('light-theme', !this.isDarkTheme);
+    this.isDarkTheme = savedTheme === 'dark' || savedTheme === null;
+    this.applyTheme();
   }
 
   toggleTheme() {
     this.isDarkTheme = !this.isDarkTheme;
+    this.applyTheme();
+    localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
+  }
+
+  private applyTheme() {
     document.body.classList.toggle('dark-theme', this.isDarkTheme);
     document.body.classList.toggle('light-theme', !this.isDarkTheme);
-    localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
   }
 
   openLink(url: string) {
@@ -44,6 +46,8 @@ export class NavBarComponent {
     dialogConfig.panelClass = 'panel-class';
     dialogConfig.hasBackdrop = false;
     dialogConfig.disableClose = true;
-    const dialogRef = this.dialog.open(ChatBotComponent, dialogConfig)
+  
+    const dialogRef = this.dialog.open(ChatBotComponent, dialogConfig);
   }
+  
 }
