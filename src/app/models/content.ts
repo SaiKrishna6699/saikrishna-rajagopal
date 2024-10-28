@@ -50,35 +50,34 @@ export const education = [
 ]
 
 export const skills = [
-    { title: 'Angular', exp: '1.8 Years', per: '95%' },
-    { title: 'HTML', exp: '2.0 Years', per: '100%' },
-    { title: 'CSS', exp: '2.0 Years', per: '98%' },
-    { title: 'Bootstrap', exp: '1.6 Years', per: '95%' },
-    { title: 'SASS/SCSS', exp: '1.3 Years', per: '94%' },
-    
-    { title: 'React', exp: '1.7 Years', per: '80%' },
-    { title: 'React Native', exp: '1.5 Years', per: '55%' },
-    { title: 'Java', exp: '2.2 Years', per: '90%' },
-    { title: 'JavaScript', exp: '2.0 Years', per: '99%' },
-    { title: 'TypeScript', exp: '1.8 Years', per: '9%5' },
+    { title: 'Angular', exp: '1.8 Years', per: '95%', iconPath: 'assets/skills/angular.svg' },
+    { title: 'HTML', exp: '2.0 Years', per: '100%', iconPath: 'assets/skills/html.svg' },
+    { title: 'CSS', exp: '2.0 Years', per: '98%', iconPath: 'assets/skills/css3.svg' },
+    { title: 'Bootstrap', exp: '1.6 Years', per: '95%', iconPath: 'assets/skills/bootstrap.svg' },
+    { title: 'SASS/SCSS', exp: '1.3 Years', per: '94%', iconPath: 'assets/skills/scss.svg' },
+    { title: 'React', exp: '1.7 Years', per: '80%', iconPath: 'assets/skills/react.svg' },
+    { title: 'React Native', exp: '1.5 Years', per: '55%', iconPath: 'assets/skills/reactnative.svg' },
+    { title: 'Java', exp: '2.2 Years', per: '90%', iconPath: 'assets/skills/java.svg' },
+    { title: 'JavaScript', exp: '2.0 Years', per: '99%', iconPath: 'assets/skills/javascript.svg' },
+    { title: 'TypeScript', exp: '1.8 Years', per: '95%', iconPath: 'assets/skills/typescript.svg' },
     // { title: 'Python', exp: '1.5 Years', per: '91%' },
 
-    { title: 'MySQL', exp: '1.7 Years', per: '94%' },
-    { title: 'MongoDB', exp: '1.4 Years', per: '90%' },
+    { title: 'MySQL', exp: '1.7 Years', per: '94%', iconPath: 'assets/skills/mysql.svg' },
+    { title: 'MongoDB', exp: '1.4 Years', per: '90%', iconPath: 'assets/skills/mongodb.svg' },
     // { title: 'Firebase', exp: '1.2 Years', per: '89%' },
 
-    
 
-    { title: 'Spring Boot', exp: '1.6 Years', per: '92%' },
-    { title: 'Spring Data', exp: '1.4 Years', per: '90%' },
+
+    { title: 'Spring Boot', exp: '1.6 Years', per: '92%', iconPath: 'assets/skills/springboot.svg' },
+    { title: 'Spring Data', exp: '1.4 Years', per: '90%', iconPath: 'assets/skills/springSecurity.svg' },
     // { title: 'Spring Security', exp: '1.3 Years', per: '91%' },
-    { title: 'Microservices', exp: '1.2 Years', per: '89%' },
+    { title: 'Microservices', exp: '1.2 Years', per: '89%', iconPath: 'assets/skills/microservices.svg' },
 
-    { title: 'JUnit', exp: '1.7 Years', per: '94%' },
-    { title: 'Apache Kafka', exp: '1.3 Years', per: '90%' },
+    { title: 'JUnit', exp: '1.7 Years', per: '94%', iconPath: 'assets/skills/javaUnit.svg' },
+    { title: 'Apache Kafka', exp: '1.3 Years', per: '90%', iconPath: 'assets/skills/kafka.svg' },
 
-    { title: 'Git', exp: '2.0 Years', per: '95%' },
-    { title: 'Bitbucket', exp: '1.5 Years', per: '95%' },
+    { title: 'Git', exp: '2.0 Years', per: '95%', iconPath: 'assets/skills/git.svg' },
+    { title: 'Bitbucket', exp: '1.5 Years', per: '95%', iconPath: 'assets/skills/github.svg' },
     // { title: 'JIRA', exp: '1.6 Years', per: '93%' },
     // { title: 'Q-Test', exp: '1.2 Years', per: '88%' }
 ];
@@ -95,10 +94,10 @@ export const pics = [
     { type: 'image', url: 'assets/img1/2.jpeg', orientation: 'square' },
     { type: 'image', url: 'assets/img1/3.jpeg', orientation: 'landscape' },
     { type: 'image', url: 'assets/img1/4.jpeg', orientation: 'landscape' },
-    { type: 'image', url: 'assets/img1/6.jpeg', orientation: 'landscape'  },
+    { type: 'image', url: 'assets/img1/6.jpeg', orientation: 'landscape' },
     { type: 'video', url: 'assets/img1/5.mp4', orientation: 'landscape' },
     { type: 'video', url: 'assets/img1/7.mp4', orientation: 'landscape' },
-    { type: 'image', url: 'assets/img1/8.jpg', orientation: 'square'  },
+    { type: 'image', url: 'assets/img1/8.jpg', orientation: 'square' },
     { type: 'image', url: 'assets/img1/10.jpg', orientation: 'landscape' },
     { type: 'image', url: 'assets/img1/11.jpg', orientation: 'landscape' },
     { type: 'image', url: 'assets/img1/12.jpg', orientation: 'square' },

@@ -2,7 +2,11 @@
     <h3>{{title}}</h3>
     <div class="main1">
         <ng-container *ngFor="let skill of skills; let i = index">
-            <div class="item" [class.active]="i === activeSkillIndex" (click)="checkSkill(i)">{{skill.title}}</div>
+            <div class="item" [class.active]="i === activeSkillIndex" (click)="checkSkill(i)">
+                <img [src]="skill.iconPath" style="width: 0.8vw; height: 0.8vw;">
+                &nbsp;
+                {{skill.title}}
+            </div>
         </ng-container>
         <div class="graph">
             <p class="context">Click on each skill to know the percentage</p>
@@ -11,15 +15,16 @@
                 [stroke]="chartOptions.stroke!">
             </apx-chart>
             <p class="skill-name">{{skillName}} &nbsp; &nbsp; &nbsp;</p>
-            <p class="skill-name">Exp: {{skillExp}}  &nbsp; &nbsp; &nbsp;</p>
+            <!-- <img class="skill-img" width="1vw" [src]="skillPath" [alt]="skillPath"> -->
+            <p class="skill-name">Exp: {{skillExp}} &nbsp; &nbsp; &nbsp;</p>
         </div>
     </div>
     <div class="main2">
         <h4>Skill Analysis</h4>
         <div class="graph1">
             <apx-chart #radarChart [series]="radarChartOptions.series!" [chart]="radarChartOptions.chart!"
-                [xaxis]="radarChartOptions.xaxis!" [yaxis]="radarChartOptions.yaxis!" [grid]="radarChartOptions.grid!" [dataLabels]="radarChartOptions.dataLabels!"
-                [fill]="radarChartOptions.fill!">
+                [xaxis]="radarChartOptions.xaxis!" [yaxis]="radarChartOptions.yaxis!" [grid]="radarChartOptions.grid!"
+                [dataLabels]="radarChartOptions.dataLabels!" [fill]="radarChartOptions.fill!">
             </apx-chart>
 
         </div>

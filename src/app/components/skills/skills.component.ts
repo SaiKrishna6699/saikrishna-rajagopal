@@ -64,7 +64,9 @@ export class SkillsComponent implements OnInit {
   activeSkillIndex: number = 0;
   skillName: string = '';
   skillExp: string = '';
+  skillPath: string = '';
 
+  iconPath = 'assets/skills/typescript.svg';
   constructor() {
     this.chartOptions = {
       series: [75],
@@ -236,6 +238,7 @@ export class SkillsComponent implements OnInit {
     this.activeSkillIndex = index;
     this.skillName = this.skills[index].title;
     this.skillExp = this.skills[index].exp;
+    this.skillPath = this.skills[index].iconPath;
 
     this.chartOptions.series = [skillPerNumber];
   }

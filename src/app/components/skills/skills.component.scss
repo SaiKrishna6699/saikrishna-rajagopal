@@ -74,6 +74,14 @@
                 font-size: clamp(0.7vw, 9px, 0.7rem);
                 font-weight: 700;
             }
+
+            .skill-img{
+                width: clamp(1vw, 12px, 1rem);
+                display: flex;
+                justify-content: flex-end;
+                font-size: clamp(0.7vw, 9px, 0.7rem);
+                font-weight: 700;
+            }
         }
     }
 
