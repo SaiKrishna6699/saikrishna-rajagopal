@@ -123,7 +123,7 @@ export const projects = [
             { name: 'Angular', iconPath: 'assets/skills/angular.svg' },
             { name: 'HTML', iconPath: 'assets/skills/html.svg' },
             { name: 'TypeScript', iconPath: 'assets/skills/typescript.svg' },
-            { name: 'Reactive Forms', iconPath: 'assets/skills/reactive-forms.svg' },  // Replace with the correct path if available
+            { name: 'Reactive Forms', iconPath: 'assets/skills/javascript.svg' },  // Replace with the correct path if available
             { name: 'Firebase', iconPath: 'assets/skills/firebase.svg' },
             { name: 'RxJs', iconPath: 'assets/skills/javascript.svg' }
         ],

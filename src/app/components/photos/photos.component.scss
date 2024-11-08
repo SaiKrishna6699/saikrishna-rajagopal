@@ -27,38 +27,38 @@
     }
 }
 
-.collage-container{
-    width: 95%;
+.collage-container {
+    width: 100%;
     height: auto;
     position: relative;
     top: 2rem;
     margin: auto;
     padding: auto;
+    columns: 5;
+    column-gap: clamp(0.5rem, 5px, 0.5vw);
+    row-gap: clamp(0.5rem, 5px, 0.5vw);
 
-    video{
+    .img1 {
         width: 100%;
-        height: auto;
+        margin-bottom: 0; /* Remove additional margin if not needed */
         border-radius: 5px;
-        margin: 1%;
-        padding: auto;
-    }
-
-    img{
-        width: 48%;
-        height: auto;
-        border-radius: 5px;
-        margin: 1%;
-        // max-height: 10rem;
-    }
-
-    img.img1{
-        width: 48%;
-        height: 11.5rem !important;
-        background-size: cover;
-    }
-
-    img:last-of-type{
-        width: 100%;
-        height: auto;
     }
 }
+
+.collage-container1{
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 2rem;
+    margin: auto;
+    padding: auto;
+    columns: 2;
+    column-gap: clamp(0.5rem, 5px, 0.5vw);
+    // row-gap: clamp(0.5rem, 5px, 0.5vw);
+    .img1{
+        width: 100%;
+        // margin-bottom: 0.5rem;
+        border-radius: 5px;
+    }
+}
+
