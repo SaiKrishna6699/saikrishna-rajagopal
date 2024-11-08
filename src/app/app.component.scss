@@ -15,6 +15,28 @@
     transition: width 0.2s ease;
 }
 
+.arrow-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(2rem, 18px, 2vw);
+    height: clamp(2rem, 18px, 2vw);
+    background-color: var(--background-color) !important;
+
+    position: fixed;
+    bottom: 15%;
+    right: 2%;
+    border-radius: 50%;
+    border: 0.1px solid var(--text-color) !important;
+    cursor: pointer;
+
+    svg{
+        width: 90%;
+        height: 90%;
+        position: relative;
+    }
+}
+
 @keyframes animateBg {
     0% {
         background-position: 0% 0%;

@@ -8,6 +8,7 @@ import { NavigationEnd, Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'SaiKrishna';
+  showArrow = false
 
   constructor(private router: Router) { }
   ngOnInit() {
@@ -24,9 +25,24 @@ export class AppComponent {
     const scrollPosition = window.scrollY;
     const scrollPercentage = (scrollPosition / totalHeight) * 100;
 
+    if(scrollPercentage > 5){
+      this.showArrow = true;
+    }
+    else{
+      this.showArrow = false;
+    }
+
     const progressBar = document.querySelector('.progress-bar') as HTMLElement;
+    console.log(scrollPercentage)
     if (progressBar) {
       progressBar.style.width = `${scrollPercentage}%`;
     }
+  }
+
+  arrowClick(): void {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Adds a smooth scroll effect
+    });
   }
 }

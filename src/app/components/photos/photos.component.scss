@@ -52,12 +52,14 @@
     top: 2rem;
     margin: auto;
     padding: auto;
-    columns: 2;
-    column-gap: clamp(0.5rem, 5px, 0.5vw);
-    // row-gap: clamp(0.5rem, 5px, 0.5vw);
-    .img1{
-        width: 100%;
-        // margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: clamp(0.5rem, 5px, 0.5vw);
+
+    .img1 {
+        width: 45%;
+        margin-bottom: clamp(0.5rem, 5px, 0.5vw);
         border-radius: 5px;
     }
 }
