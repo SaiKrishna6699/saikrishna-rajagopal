@@ -38,20 +38,25 @@
             font-size: clamp(10px, 0.6vw, 2.8vw);
             font-weight: 500;
             cursor: pointer;
-          
+
             display: flex;
             align-items: center;
             justify-content: center;
             transition: transform ease-in-out 0.5s;
-          
+
             &.active {
-              background-color: var(--text-color);
-              color: var(--background-color);
-              transform: scale(1.08);
-              transition: transform ease-in-out 0.5s;
+                background-color: var(--text-color);
+                color: var(--background-color);
+                transform: scale(1.08);
+                transition: transform ease-in-out 0.5s;
             }
-          }
-          
+        }
+
+
+        .skill_img {
+            width: clamp(0.8rem, 12px, 0.8vw);
+        }
+
 
         .graph {
             width: 100%;
@@ -61,13 +66,13 @@
             border: 0.1px solid rgb(131, 131, 131);
             border-radius: 5px;
 
-            .context{
+            .context {
                 font-size: clamp(0.6vw, 8px, 0.6rem);
                 padding-left: 10px;
                 font-weight: 600;
             }
 
-            .skill-name{
+            .skill-name {
                 width: 100%;
                 display: flex;
                 justify-content: flex-end;
@@ -75,7 +80,7 @@
                 font-weight: 700;
             }
 
-            .skill-img{
+            .skill-img {
                 width: clamp(1vw, 12px, 1rem);
                 display: flex;
                 justify-content: flex-end;
@@ -85,12 +90,13 @@
         }
     }
 
-    .main2{
+    .main2 {
         width: 100%;
         height: auto;
         display: flex;
         flex-wrap: wrap;
         gap: clamp(0.3rem, 5px, 0.6rem);
+
         h4 {
             font-size: clamp(0.75rem, 10px, 4.45rem);
             font-weight: 700;
@@ -101,7 +107,7 @@
             margin-top: 20px;
         }
 
-        .graph1{
+        .graph1 {
             width: 100%;
             min-height: clamp(15rem, 280px, 18rem);
             margin: auto;
@@ -111,7 +117,7 @@
             display: flex;
             justify-content: center;
 
-            apx-chart{
+            apx-chart {
                 width: 90%;
             }
         }

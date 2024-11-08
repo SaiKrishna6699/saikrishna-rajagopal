@@ -3,7 +3,7 @@
     <div class="main1">
         <ng-container *ngFor="let skill of skills; let i = index">
             <div class="item" [class.active]="i === activeSkillIndex" (click)="checkSkill(i)">
-                <img [src]="skill.iconPath" style="width: 0.8vw; height: 0.8vw;">
+                <img [src]="skill.iconPath" class="skill_img">
                 &nbsp;
                 {{skill.title}}
             </div>

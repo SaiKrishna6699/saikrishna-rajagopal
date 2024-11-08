@@ -14,7 +14,9 @@
                     <p class="p-desc">{{pro.desc}}</p>
                     <div class="p-stack-list">
                         <ng-container *ngFor="let item of pro.stack">
-                            <div class="p-item">{{item}}</div>
+                            <div class="p-item">
+                                <img [src]="item.iconPath" class="skill_img">
+                                {{item.name}}</div>
                         </ng-container>
                     </div>
                     <button [matTooltip]="'coming soon'" [matTooltipPosition]="'below'" class="p-link">Check out <svg

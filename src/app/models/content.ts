@@ -83,11 +83,69 @@ export const skills = [
 ];
 
 export const projects = [
-    { title: 'Trinethra Test Portal', time: 'Sep 2023 - Oct 2023', desc: `An Angular-based web app hosted on Firebase for seamless test creation, management, and participation. It offers a user-friendly interface, real-time synchronization, and secure authentication for efficient online testing.`, stack: ['Angular', 'HTML', 'CSS', 'TypeScript', 'Firebase', 'NoSQL', 'Node Js'], img: 'assets/img/test-portal.png' },
-    { title: 'Weather App', time: 'Jul 2023 - Aug 2023', desc: `An Angular-based application hosted on Firebase, providing accurate weather updates for cities, states, provinces, and countries. It integrates with a weather API for real-time data and forecasts.`, stack: ['Angular', 'HTML', 'CSS', 'TypeScript', 'Firebase', 'NoSQL', 'Scss', 'Weather Api', 'RxJs'], img: 'assets/img/weather app.png' },
-    { title: 'Currency Convertor', time: 'Mar 2023 - Apr 2023', desc: `A real-time application built with Angular and hosted on Firebase, offering instant currency conversion based on live exchange rates for accurate financial tracking and currency exchange.`, stack: ['Angular', 'HTML', 'TypeScript', 'Reactive Forms', 'Firebase', 'RxJs'], img: 'assets/img/currency-converter.png' },
-    { title: 'Airbus, Bus Booking System', time: 'Nov 2022 - Jan 2024', desc: `A real-time bus booking application utilizing Angular for the frontend, Spring Boot and microservices for the backend, MySQL for database management, and deployed using Jenkins and Netlify. It features seamless integration and up-to-date booking capabilities.`, stack: ['Angular', 'Spring Boot', 'Micro Services', 'MySql', 'Jenkins', 'TypeScript', 'Netify'], img: 'assets/img/airbus.png' }
-]
+    {
+        title: 'Trinethra Test Portal',
+        time: 'Sep 2023 - Oct 2023',
+        desc: `An Angular-based web app hosted on Firebase for seamless test creation, management, and participation. It offers a user-friendly interface, real-time synchronization, and secure authentication for efficient online testing.`,
+        stack: [
+            { name: 'Angular', iconPath: 'assets/skills/angular.svg' },
+            { name: 'HTML', iconPath: 'assets/skills/html.svg' },
+            { name: 'CSS', iconPath: 'assets/skills/css3.svg' },
+            { name: 'TypeScript', iconPath: 'assets/skills/typescript.svg' },
+            { name: 'Firebase', iconPath: 'assets/skills/firebase.svg' },
+            { name: 'NoSQL', iconPath: 'assets/skills/mongodb.svg' },  // Assuming MongoDB as NoSQL database
+            { name: 'Node Js', iconPath: 'assets/skills/nodejs.svg' }  // Replace with the correct path if available
+        ],
+        img: 'assets/img/test-portal.png'
+    },
+    {
+        title: 'Weather App',
+        time: 'Jul 2023 - Aug 2023',
+        desc: `An Angular-based application hosted on Firebase, providing accurate weather updates for cities, states, provinces, and countries. It integrates with a weather API for real-time data and forecasts.`,
+        stack: [
+            { name: 'Angular', iconPath: 'assets/skills/angular.svg' },
+            { name: 'HTML', iconPath: 'assets/skills/html.svg' },
+            { name: 'CSS', iconPath: 'assets/skills/css3.svg' },
+            { name: 'TypeScript', iconPath: 'assets/skills/typescript.svg' },
+            { name: 'Firebase', iconPath: 'assets/skills/firebase.svg' },
+            { name: 'NoSQL', iconPath: 'assets/skills/mongodb.svg' },
+            { name: 'Scss', iconPath: 'assets/skills/scss.svg' },
+            { name: 'Weather Api', iconPath: 'assets/skills/api.svg' },  // Replace with the correct path if available
+            { name: 'RxJs', iconPath: 'assets/skills/javascript.svg' }  // Replace with the correct path if available
+        ],
+        img: 'assets/img/weather app.png'
+    },
+    {
+        title: 'Currency Convertor',
+        time: 'Mar 2023 - Apr 2023',
+        desc: `A real-time application built with Angular and hosted on Firebase, offering instant currency conversion based on live exchange rates for accurate financial tracking and currency exchange.`,
+        stack: [
+            { name: 'Angular', iconPath: 'assets/skills/angular.svg' },
+            { name: 'HTML', iconPath: 'assets/skills/html.svg' },
+            { name: 'TypeScript', iconPath: 'assets/skills/typescript.svg' },
+            { name: 'Reactive Forms', iconPath: 'assets/skills/reactive-forms.svg' },  // Replace with the correct path if available
+            { name: 'Firebase', iconPath: 'assets/skills/firebase.svg' },
+            { name: 'RxJs', iconPath: 'assets/skills/javascript.svg' }
+        ],
+        img: 'assets/img/currency-converter.png'
+    },
+    {
+        title: 'Airbus, Bus Booking System',
+        time: 'Nov 2022 - Jan 2024',
+        desc: `A real-time bus booking application utilizing Angular for the frontend, Spring Boot and microservices for the backend, MySQL for database management, and deployed using Jenkins and Netlify. It features seamless integration and up-to-date booking capabilities.`,
+        stack: [
+            { name: 'Angular', iconPath: 'assets/skills/angular.svg' },
+            { name: 'Spring Boot', iconPath: 'assets/skills/springboot.svg' },
+            { name: 'Microservices', iconPath: 'assets/skills/microservices.svg' },
+            { name: 'MySQL', iconPath: 'assets/skills/mysql.svg' },
+            { name: 'Jenkins', iconPath: 'assets/skills/jenkins.svg' },  // Replace with the correct path if available
+            { name: 'TypeScript', iconPath: 'assets/skills/typescript.svg' },
+            { name: 'Netlify', iconPath: 'assets/skills/netlify.svg' }  // Replace with the correct path if available
+        ],
+        img: 'assets/img/airbus.png'
+    }
+];
+
 
 export const pics = [
     { type: 'image', url: 'assets/img1/1.jpeg', orientation: 'square' },
