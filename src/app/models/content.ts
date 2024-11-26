@@ -27,25 +27,71 @@ export const Content = {
 
 export const experience = [
     {
-        title: 'Relanto.ai', role: 'Software Engineer', date: 'Sep 2023 - Present', img: 'assets/img/relanto_inc_logo.jpg', content: `Developed several single-page web applications across different domains, focusing on enhancing user
-                          experience, security, and data interaction. For a Human Resource and Payroll Software Solutions
-                          organization, integrated Microsoft Multi-Factor Authentication (MFA), optimized API usage, and
-                          designed interactive dashboards with graphs and statistics. In another project, created an
-                          automation framework tool with a code editor interface, customizable forms, and a highly interactive
-                          dashboard. For a web application used by Cisco, implemented complex search interfaces, Kafka
-                          consumers, and developed APIs for efficient data transfer and enhanced user engagement. The work
-                          consistently emphasizes user-friendly design, security, and performance optimization.`},
+        "title": "Relanto.ai",
+        "role": "Software Engineer",
+        "date": "Sep 2023 - Present",
+        "img": "assets/img/relanto_inc_logo.jpg",
+        "content": [
+            "Developed several single-page web applications across different domains, focusing on enhancing user experience, security, and data interaction.",
+            "Integrated Microsoft Multi-Factor Authentication (MFA) for a Human Resource and Payroll Software Solutions organization.",
+            "Optimized API usage for improved efficiency.",
+            "Designed interactive dashboards featuring graphs and statistics.",
+            "Created an automation framework tool with a code editor interface.",
+            "Built customizable forms and a highly interactive dashboard.",
+            "Implemented complex search interfaces for a web application used by Cisco.",
+            "Worked with Kafka consumers for real-time data processing.",
+            "Developed APIs for efficient data transfer, enhancing user engagement.",
+            "Designed and implemented a schema and group mapping feature to streamline project workflows.",
+            "Built a dynamic data generation tool for creating positive and negative test records in CSV and JSON formats.",
+            "Integrated customizable datatypes and a \"derive from example\" functionality for generating data seamlessly.",
+            "Delivered highly interactive, user-friendly solutions emphasizing scalability and performance optimization."
+        ]
+    },
     {
-        title: 'Mphasis LTD', role: 'Associate Software Engineer', date: 'Jan 2022 - Feb 2023', img: 'assets/img/mphasis_logo.jpg', content: `Collaborated with a diverse team of highly skilled professionals to develop the front-end user interface (UI) and test REST APIs for Gemini, a US brokerage application. Worked closely with the front-end team using the Angular framework to create an intuitive and visually appealing UI. Conducted comprehensive testing of REST APIs to ensure functionality and adherence to requirements. Participated in code reviews and actively contributed to the team's code quality and best practices. Implemented version control using Git and GitHub for efficient collaboration and code management. Enhanced the front-end UI by personalizing the code and ensuring logical and efficient functionality. Contributed to the successful delivery of the application by actively participating in both front-end UI development and API testing.`
+        "title": "Mphasis LTD",
+        "role": "Associate Software Engineer",
+        "date": "Jan 2022 - Feb 2023",
+        "img": "assets/img/mphasis_logo.jpg",
+        "content": [
+            "Collaborated with a diverse team of highly skilled professionals to develop the front-end user interface (UI) and test REST APIs for Gemini, a US brokerage application.",
+            "Worked closely with the front-end team using the Angular framework to create an intuitive and visually appealing UI.",
+            "Conducted comprehensive testing of REST APIs to ensure functionality and adherence to requirements.",
+            "Participated in code reviews and actively contributed to the team's code quality and best practices.",
+            "Implemented version control using Git and GitHub for efficient collaboration and code management.",
+            "Enhanced the front-end UI by personalizing the code and ensuring logical and efficient functionality.",
+            "Developed reusable Angular components to standardize UI elements and improve code maintainability.",
+            "Integrated CI/CD pipelines for automated testing and deployment, reducing delivery time.",
+            "Collaborated with stakeholders to gather requirements and provide technical solutions tailored to business needs."
+        ]
     }
-]
+];
+
+
 
 export const education = [
     {
-        title: 'Hindustan Institue of Technology and Sciences', role: 'Computer Science and Engineering', date: 'Aug 2017 - Jul 2021', img: 'assets/img/hindustan_logo.jpg', content: `Secured 8.30 CGPA out of 10`
+        "title": "Hindustan Institute of Technology and Sciences",
+        "role": "B Tech, CSE",
+        "date": "Aug 2017 - Jul 2021",
+        "img": "assets/img/hindustan_logo.jpg",
+        "content": [
+            "Secured 8.30 CGPA out of 10.",
+            "Completed projects focused on web development and data structures.",
+            "Served as a team lead for the capstone project, delivering a fully functional e-commerce web application.",
+            "Actively participated in technical symposiums and hackathons."
+        ]
     },
     {
-        title: 'Chaitanya Junior College', role: 'Intermediate (PCM)', date: 'Jun 2015 - Apr 2017', img: 'assets/img/chaitnaya_logo.jpg', content: `Secured 8.73 CGPA out of 10`
+        "title": "Chaitanya Junior College",
+        "role": "Intermediate (PCM)",
+        "date": "Jun 2015 - Apr 2017",
+        "img": "assets/img/chaitnaya_logo.jpg",
+        "content": [
+            "Secured 8.73 CGPA out of 10.",
+            "Achieved top marks in Mathematics and Physics.",
+            "Participated in inter-college quiz competitions, securing winning positions.",
+            "Gained a strong foundation in problem-solving and analytical skills."
+        ]
     }
 ]
 

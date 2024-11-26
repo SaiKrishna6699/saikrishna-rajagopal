@@ -130,6 +130,21 @@
                     font-size: clamp(0.7vw, 10px, 2.6vw);
                     font-weight: 400;
                 }
+
+                ul{
+                    position: relative;
+                    margin: 0%;
+                    // padding: 0.5%;
+                    font-size: clamp(0.7vw, 10px, 2.6vw);
+                    font-weight: 400;
+                }
+                li{
+                    margin: 0%;
+                    margin-left: -6%;
+                    padding: 0.5%;
+                    font-size: clamp(0.7vw, 10px, 2.6vw);
+                    font-weight: 400;
+                }
             }
         }
     }

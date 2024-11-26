@@ -24,9 +24,9 @@
                     </div>
                 </div>
                 <div class="row1" *ngIf="isRotated[i]" @expandCollapse>
-                    <p>
-                        {{tab.content}}
-                    </p>
+                    <ul>
+                        <li *ngFor="let item of tab.content">{{ item }}</li>
+                    </ul>
                 </div>
             </div>
         </div>
